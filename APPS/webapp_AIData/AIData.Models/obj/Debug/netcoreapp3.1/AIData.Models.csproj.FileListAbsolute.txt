@@ -1,0 +1,10 @@
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.Models\bin\Debug\netcoreapp3.1\AIData.Models.deps.json
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.Models\bin\Debug\netcoreapp3.1\AIData.Models.dll
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.Models\bin\Debug\netcoreapp3.1\AIData.Models.pdb
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.Models\obj\Debug\netcoreapp3.1\AIData.Models.csproj.AssemblyReference.cache
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.Models\obj\Debug\netcoreapp3.1\AIData.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.Models\obj\Debug\netcoreapp3.1\AIData.Models.AssemblyInfoInputs.cache
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.Models\obj\Debug\netcoreapp3.1\AIData.Models.AssemblyInfo.cs
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.Models\obj\Debug\netcoreapp3.1\AIData.Models.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.Models\obj\Debug\netcoreapp3.1\AIData.Models.dll
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.Models\obj\Debug\netcoreapp3.1\AIData.Models.pdb

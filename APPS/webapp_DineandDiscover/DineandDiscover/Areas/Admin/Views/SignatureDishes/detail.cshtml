@@ -1,0 +1,225 @@
+
+					<!--This code generated from Deliveries Powered by Mahat, Source Machine : 15.206.208.9 , Build Number : Build 14092021 #2021-09-014(Updated on 29102021 12:49) on 07/16/2023 13:58:29 -->
+					@using Microsoft.AspNetCore.Http
+					@inject IHttpContextAccessor HttpContextAccessor
+					@model DineandDiscover.Models.SignatureDishesModel
+					@{
+					ViewData["Title"] = "Signature Dishes";
+					Layout = "~/Views/Shared/_Layout.cshtml";
+					}
+
+					<div class="">
+					     
+					<div class="">
+
+					      <div id="cma_printableArea">
+	
+                            <div class="row printablerow"> 
+                             
+                            <div class="col-sm-4 col-xs-12 p-2 signaturedishes_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Signature Dishes</label><br>
+										<span class="auto_cls_signaturedishes"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+ 
+				<div class="col-sm-12 col-xs-12 mt-3"><!--form_group_div_block-->
+					<div class="card card-blue card-section cma_section_band">
+							<div class="card-head">
+								<header>Signature Dish :</header>
+							</div>
+							<div class="card-body card-container-Padding-NoShadow">
+								<div class="row">
+										<div class="col-sm-4 col-xs-12 p-2 dishimage1_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Dish Image 1 </label><br>
+										<span class="auto_cls_dishimage1"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+<div class="col-sm-4 col-xs-12 p-2 dishname1_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Dish Name 1</label><br>
+										<span class="auto_cls_dishname1"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+<div class="col-sm-4 col-xs-12 p-2 dishimage2_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Dish Image 2</label><br>
+										<span class="auto_cls_dishimage2"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+<div class="col-sm-4 col-xs-12 p-2 dishname2_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Dish Name 2</label><br>
+										<span class="auto_cls_dishname2"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+
+
+								</div>
+							</div>
+					</div>
+				</div><!--form_group_div_block-->
+			 
+
+											 
+											 
+                            </div>
+                         </div>
+						 <div class="row">
+					            <div class="col-sm-12 col-xs-12">
+					                <input type="button" class="btn cma_primary_button  waves-effect pull-right" onclick="printDiv('cma_printableArea')" value="Print" />
+
+                                    <button type="button" id="btnSubmit" onclick="window.history.back()" class="btn btn-secondary cma_cancel_button waves-effect">Back</button>            
+
+					            </div>
+					        </div>					
+  
+                    </div>
+					
+                    <link href="~/components/jquery-colorbox/colorbox.css" rel="stylesheet" />
+                    <script src="~/components/jquery-colorbox/jquery.colorbox.js"></script>
+                    <link href="~/css/GallaryContent/style.css" rel="stylesheet" />
+                    <link href="~/components/starrr/starrr.css" rel="stylesheet" />
+					 
+					<script type="text/javascript">
+                     function printDiv(divName) {
+                        var printContents = document.getElementById(divName).innerHTML;
+                        var originalContents = document.body.innerHTML;
+
+                        document.body.innerHTML = printContents;
+
+                        window.print();
+
+                        document.body.innerHTML = originalContents;
+                    }
+                    function fill_SignatureDishes_view_data(){
+
+                       var  SignatureDishesid = getUrlVars()["id"];
+                                            $("#viewDetails_Auto").show()
+											$(".auto_checker_action").hide()
+                                                $.ajax({
+												url: '@Url.Action("getById_sp_all_SignatureDishes")',
+												dataType: 'json',
+												data:{SignatureDishesid: SignatureDishesid },
+												success: function(data) {
+
+												var obj=data.Table[0]
+													for (var key in obj) {
+													
+															$(".auto_cls_"+key).html(obj[key]);
+														 	
+															if(key=='dishimage1'){
+																			$('.auto_cls_dishimage1').empty()
+                                                                            if(obj[key] !=null)  {            
+                                                                          
+                                                                            var uploaded_dishimage1 = obj[key].split('|');
+                                                                            var iterate = 0;
+                                                                            for (var i = 0; i < uploaded_dishimage1.length; i++) {
+
+
+	                                                                            if (uploaded_dishimage1[i] != "") {
+		                                                                            iterate = iterate + 1;
+		                                                                            if (iterate == 1)
+			                                                                            $('.auto_cls_dishimage1').append('<a href=' + uploaded_dishimage1[i] + ' class="imgdishimage1 auto_clr_dishimage1"><img  src=' + uploaded_dishimage1[i] + ' width="100px" /></a>')
+		                                                                            else
+
+			                                                                            $('.auto_cls_dishimage1').append('<div style="display:none"> <a href=' + uploaded_dishimage1[i] + ' class="imgdishimage1 auto_clr_dishimage1"><img  src=' + uploaded_dishimage1[i] + ' width="100px" /></a></div>')
+		 
+	                                                                            }
+
+
+                                                                            }
+
+                                                                            $('body').on('click', 'a.imgdishimage1', function (e) {
+                                                                            e.preventDefault();
+                                                                            $('.imgdishimage1').colorbox({ rel: '.imgdishimage1', width: "90%", height: "80%" });
+                                                                            $.colorbox({ open: true });
+                                                                            });
+
+
+
+
+                                                                                    }
+
+
+																	}
+if(key=='dishimage2'){
+																			$('.auto_cls_dishimage2').empty()
+                                                                            if(obj[key] !=null)  {            
+                                                                          
+                                                                            var uploaded_dishimage2 = obj[key].split('|');
+                                                                            var iterate = 0;
+                                                                            for (var i = 0; i < uploaded_dishimage2.length; i++) {
+
+
+	                                                                            if (uploaded_dishimage2[i] != "") {
+		                                                                            iterate = iterate + 1;
+		                                                                            if (iterate == 1)
+			                                                                            $('.auto_cls_dishimage2').append('<a href=' + uploaded_dishimage2[i] + ' class="imgdishimage2 auto_clr_dishimage2"><img  src=' + uploaded_dishimage2[i] + ' width="100px" /></a>')
+		                                                                            else
+
+			                                                                            $('.auto_cls_dishimage2').append('<div style="display:none"> <a href=' + uploaded_dishimage2[i] + ' class="imgdishimage2 auto_clr_dishimage2"><img  src=' + uploaded_dishimage2[i] + ' width="100px" /></a></div>')
+		 
+	                                                                            }
+
+
+                                                                            }
+
+                                                                            $('body').on('click', 'a.imgdishimage2', function (e) {
+                                                                            e.preventDefault();
+                                                                            $('.imgdishimage2').colorbox({ rel: '.imgdishimage2', width: "90%", height: "80%" });
+                                                                            $.colorbox({ open: true });
+                                                                            });
+
+
+
+
+                                                                                    }
+
+
+																	}
+
+
+													}
+												}
+
+												})
+
+                   }
+                   
+
+					$(document).ready(function () {
+
+
+					fill_SignatureDishes_view_data()
+
+
+					var Actions=getAutho("SignatureDishes","list")
+					if(Actions == undefined){
+					window.location = "@Url.Action("RoleAuthorizationFailed", "users")"
+					}
+
+
+
+
+					});
+					 
+					</script>
+					 
+					

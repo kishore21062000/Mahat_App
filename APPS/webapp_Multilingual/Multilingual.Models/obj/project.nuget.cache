@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "piUr2dZFWfR8Hek4odTkydhzwz6ZeREn+yVS6nUNuIrscPCi8hnlOukto6++RIoBIFTM1VjTpIzhjH0l4TQFsA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lenovo\\Downloads\\webapp_Multilingual\\Multilingual.Models\\Multilingual.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lenovo\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.6.2\\fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\8.6.2\\fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}

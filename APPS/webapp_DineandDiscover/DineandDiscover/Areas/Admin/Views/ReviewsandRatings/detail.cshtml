@@ -1,0 +1,218 @@
+
+					<!--This code generated from Deliveries Powered by Mahat, Source Machine : 15.206.208.9 , Build Number : Build 14092021 #2021-09-014(Updated on 29102021 12:49) on 07/15/2023 15:50:43 -->
+					@using Microsoft.AspNetCore.Http
+					@inject IHttpContextAccessor HttpContextAccessor
+					@model DineandDiscover.Models.ReviewsandRatingsModel
+					@{
+					ViewData["Title"] = "Reviews and Ratings";
+					Layout = "~/Views/Shared/_Layout.cshtml";
+					}
+
+					<div class="">
+					     
+					<div class="">
+
+					      <div id="cma_printableArea">
+	
+                            <div class="row printablerow"> 
+                             
+                            <div class="col-sm-4 col-xs-12 p-2 reviewsandratings_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Reviews and Ratings</label><br>
+										<span class="auto_cls_reviewsandratings"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+ 
+				<div class="col-sm-12 col-xs-12 mt-3"><!--form_group_div_block-->
+					<div class="card card-blue card-section cma_section_band">
+							<div class="card-head">
+								<header>Food Rating :</header>
+							</div>
+							<div class="card-body card-container-Padding-NoShadow">
+								<div class="row">
+										<div class="col-sm-4 col-xs-12 p-2 givemark1_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>give mark1</label><br>
+										<span class="auto_cls_givemark1"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+<div class="col-sm-4 col-xs-12 p-2 comments1_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Comments1</label><br>
+										<span class="auto_cls_comments1"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+
+
+								</div>
+							</div>
+					</div>
+				</div><!--form_group_div_block-->
+			 
+ 
+				<div class="col-sm-12 col-xs-12 mt-3"><!--form_group_div_block-->
+					<div class="card card-blue card-section cma_section_band">
+							<div class="card-head">
+								<header>Service Rating :</header>
+							</div>
+							<div class="card-body card-container-Padding-NoShadow">
+								<div class="row">
+										<div class="col-sm-4 col-xs-12 p-2 givemark2_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>give mark2</label><br>
+										<span class="auto_cls_givemark2"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+<div class="col-sm-4 col-xs-12 p-2 comments2_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Comments2</label><br>
+										<span class="auto_cls_comments2"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+
+
+								</div>
+							</div>
+					</div>
+				</div><!--form_group_div_block-->
+			 
+ 
+				<div class="col-sm-12 col-xs-12 mt-3"><!--form_group_div_block-->
+					<div class="card card-blue card-section cma_section_band">
+							<div class="card-head">
+								<header>Overall Experience :</header>
+							</div>
+							<div class="card-body card-container-Padding-NoShadow">
+								<div class="row">
+										<div class="col-sm-4 col-xs-12 p-2 givemark3_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>give mark3</label><br>
+										<span class="auto_cls_givemark3"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+<div class="col-sm-4 col-xs-12 p-2 comments3_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Comments3</label><br>
+										<span class="auto_cls_comments3"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+
+
+								</div>
+							</div>
+					</div>
+				</div><!--form_group_div_block-->
+			 
+
+											 
+											 
+                            </div>
+                         </div>
+						 <div class="row">
+					            <div class="col-sm-12 col-xs-12">
+					                <input type="button" class="btn cma_primary_button  waves-effect pull-right" onclick="printDiv('cma_printableArea')" value="Print" />
+
+                                    <button type="button" id="btnSubmit" onclick="window.history.back()" class="btn btn-secondary cma_cancel_button waves-effect">Back</button>            
+
+					            </div>
+					        </div>					
+  
+                    </div>
+					
+                    <link href="~/components/jquery-colorbox/colorbox.css" rel="stylesheet" />
+                    <script src="~/components/jquery-colorbox/jquery.colorbox.js"></script>
+                    <link href="~/css/GallaryContent/style.css" rel="stylesheet" />
+                    <link href="~/components/starrr/starrr.css" rel="stylesheet" />
+					 
+					<script type="text/javascript">
+                     function printDiv(divName) {
+                        var printContents = document.getElementById(divName).innerHTML;
+                        var originalContents = document.body.innerHTML;
+
+                        document.body.innerHTML = printContents;
+
+                        window.print();
+
+                        document.body.innerHTML = originalContents;
+                    }
+                    function fill_ReviewsandRatings_view_data(){
+
+                       var  ReviewsandRatingsid = getUrlVars()["id"];
+                                            $("#viewDetails_Auto").show()
+											$(".auto_checker_action").hide()
+                                                $.ajax({
+												url: '@Url.Action("getById_sp_all_ReviewsandRatings")',
+												dataType: 'json',
+												data:{ReviewsandRatingsid: ReviewsandRatingsid },
+												success: function(data) {
+
+												var obj=data.Table[0]
+													for (var key in obj) {
+													
+															$(".auto_cls_"+key).html(obj[key]);
+														 	
+															if(key=='givemark1'){
+																			$('.auto_cls_givemark1').empty()
+                                                                            if(obj[key] !=null)
+																			$('.auto_cls_givemark1').append(getRatingString(obj[key]))
+																	}
+if(key=='givemark2'){
+																			$('.auto_cls_givemark2').empty()
+                                                                            if(obj[key] !=null)
+																			$('.auto_cls_givemark2').append(getRatingString(obj[key]))
+																	}
+if(key=='givemark3'){
+																			$('.auto_cls_givemark3').empty()
+                                                                            if(obj[key] !=null)
+																			$('.auto_cls_givemark3').append(getRatingString(obj[key]))
+																	}
+
+
+													}
+												}
+
+												})
+
+                   }
+                   
+
+					$(document).ready(function () {
+
+
+					fill_ReviewsandRatings_view_data()
+
+
+					var Actions=getAutho("ReviewsandRatings","list")
+					if(Actions == undefined){
+					window.location = "@Url.Action("RoleAuthorizationFailed", "users")"
+					}
+
+
+
+
+					});
+					 
+					</script>
+					 
+					

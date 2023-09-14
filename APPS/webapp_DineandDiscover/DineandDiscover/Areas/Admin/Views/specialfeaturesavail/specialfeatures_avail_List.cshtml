@@ -1,0 +1,743 @@
+
+					<!--This code generated from Deliveries Powered by Mahat, Source Machine : 15.206.208.9 , Build Number : Build 14092021 #2021-09-014(Updated on 29102021 12:49) on 07/17/2023 08:36:16 -->
+					@using Microsoft.AspNetCore.Http
+					@inject IHttpContextAccessor HttpContextAccessor
+					@model DineandDiscover.Models.specialfeaturesavailModel
+					@{
+					ViewData["Title"] = "specialfeatures avail List";
+					Layout = "~/Views/Shared/_Layout.cshtml";
+					}
+
+					<div class="card " style="padding:20px;">
+					<div class="mobileHeader"><!--form_card_header-->
+					<div class="row">
+					<div class="col-sm-12 col-xs-12">
+					<h3 class="formHdr">specialfeatures avail List</h3>
+					</div>
+					</div>
+					</div><!--form_card_header-->
+					<div class="card-body" style="padding:1px;padding-top:0px;">
+
+					@if(TempData["errMessage"] != null)
+					{
+					<div class="row">
+					<div class="col-sm-12 col-xs-12">
+					<div class="alert alert-danger alert-dismissible ">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">x</span>
+					</button>
+					Info :  @TempData["errMessage"]
+					</div>
+					</div>
+					</div>
+					}
+
+					@if(TempData["message"] != null)
+					{
+					<div class="row">
+					<div class="col-sm-12 col-xs-12">
+					<div class="alert alert-success alert-dismissible ">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">x</span>
+					</button>
+					Info :  @TempData["message"]
+					</div>
+					</div>
+					</div>
+					}
+
+					<input type="hidden" id="specialfeaturesavailid" name="specialfeaturesavailid"/>
+					<div class="row">
+					
+
+					</div>
+
+					<div class="row"><div class="col-sm-12 col-xs-12">
+					<div class="table-responsive" style="margin:0px;">
+					<table id="tblspecialfeaturesavail" class="table order-column hover responsive nowrap" width="100%" style="margin:0px; ">
+					<thead class="thead-default">
+					<tr>
+					<th>special Features avail</th>
+<th>video of Balcony</th>
+<th>image of Balcony</th>
+<th>Image of kids play area</th>
+<th>Video of kids play area</th>
+<th>Image of cocktail</th>
+<th>Video of cocktail</th>
+<th>opening time</th>
+<th>closing time</th>
+<th>Contact Info</th>
+<th>Contact Mail</th>
+<th>special feature for disability</th>
+<th>Walking stick available</th>
+<th>Wheel chair availability</th>
+<th>image of entrance</th>
+<th>Video of overall restaurant</th>
+
+					<th class="all">Action</th>
+					
+
+					</tr>
+					</thead>
+					<tbody></tbody>
+					
+					</table>
+					</div>
+
+					</div>
+					
+					
+					</div>
+					
+					</div>
+					</div>
+					
+                    <link href="~/components/jquery-colorbox/colorbox.css" rel="stylesheet" />
+                    <script src="~/components/jquery-colorbox/jquery.colorbox.js"></script>
+                    <link href="~/css/GallaryContent/style.css" rel="stylesheet" />
+                    <link href="~/components/starrr/starrr.css" rel="stylesheet" />
+					
+					<script type="text/javascript">
+
+                 
+
+					function fill_specialfeaturesavail()
+					{
+						
+
+					var sendFilterData = {
+							  		
+								}
+
+					
+
+
+					var table=$("#tblspecialfeaturesavail").DataTable({
+columnDefs: [{ 
+     targets: -1,
+     title: '<i class="fa fa-pencil fa-lg"></i>'
+  }],
+		destroy:true,
+	"order": [],"aaSorting": [],
+ 	autoWidth: !1,
+	responsive:!0,
+	lengthMenu: [
+	[15, 30, 45, -1],
+	["15 Rows", "30 Rows", "45 Rows", "Everything"]
+	],
+	language: {
+	searchPlaceholder: "Search for records..."
+	},
+	 language: { search: '<i class="fa fa-search"></i>', searchPlaceholder: "Search for records..." },
+	dom: "Bfrtip", sDom: '<"dataTables__top"lfB>rt<"dataTables__bottom"ip><"clear">',
+  
+	buttons: [{
+	extend: "excelHtml5",
+	title: "List Of specialfeaturesavail Data"
+	}, {
+	extend: "csvHtml5",
+	title: "List Of specialfeaturesavail Data"
+	}, {
+	extend: "print",
+	title: "List Of specialfeaturesavail Data"
+	}],
+ initComplete: function(a, b) {
+
+
+
+      $(this).closest(".dataTables_wrapper").find(".dt-buttons").hide();
+      
+if ($('#btnFilter').length) {
+     $(this).closest(".dataTables_wrapper").find(".dataTables_length").prepend(`
+        <i class="automatonShowFilter actions__item mdi material-icons">filter_alt</i>
+      `);
+ }
+var Actions=getAutho("specialfeaturesavail","create")
+		if(Actions != undefined){
+			var create_URL = "@Url.Action("entry.viewname", "specialfeaturesavail")"
+		    create_URL = create_URL.replace("entry.viewname", Actions.actionmethodname);
+            
+            $(this).closest(".dataTables_wrapper").find(".dataTables__top").prepend(`
+        <div class="dataTables_buttons actions">
+           <div class="input-group prefix">
+                <span class="input-group-addon">
+                <i class="material-icons">search</i>
+                </span>
+                <input type="text" class="form-control dt-global-search" placeholder="Search..." />
+            </div>
+          <div class="dropdown actions__item cma_top_icon">
+            <i data-toggle="dropdown" class="material-icons">share</i>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <a href="javascript: void 0" class="dropdown-item" data-table-action="excel">Excel (.xlsx)</a>
+              <a href="javascript: void 0" class="dropdown-item" data-table-action="csv">CSV (.csv)</a>
+              <a href="javascript: void 0" class="dropdown-item" data-table-action="print">Print</a>
+            </ul>
+          </div>
+         <div class="dropdown actions__item cma_top_icon">
+                                    <i data-toggle="dropdown" class="material-icons">settings</i>
+                                    <ul class="dropdown-menu dropdown-menu-right ColVis_collection">
+                                    <li>
+                                                                <label><span class="material-icons">drag_indicator</span>special Features avail
+ <input type="checkbox" class="colvis_switch" data-column="0" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>video of Balcony
+ <input type="checkbox" class="colvis_switch" data-column="1" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>image of Balcony
+ <input type="checkbox" class="colvis_switch" data-column="2" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Image of kids play area
+ <input type="checkbox" class="colvis_switch" data-column="3" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Video of kids play area
+ <input type="checkbox" class="colvis_switch" data-column="4" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Image of cocktail
+ <input type="checkbox" class="colvis_switch" data-column="5" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Video of cocktail
+ <input type="checkbox" class="colvis_switch" data-column="6" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>opening time
+ <input type="checkbox" class="colvis_switch" data-column="7" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>closing time
+ <input type="checkbox" class="colvis_switch" data-column="8" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Contact Info
+ <input type="checkbox" class="colvis_switch" data-column="9" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Contact Mail
+ <input type="checkbox" class="colvis_switch" data-column="10" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>special feature for disability
+ <input type="checkbox" class="colvis_switch" data-column="11" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Walking stick available
+ <input type="checkbox" class="colvis_switch" data-column="12" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Wheel chair availability
+ <input type="checkbox" class="colvis_switch" data-column="13" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>image of entrance
+ <input type="checkbox" class="colvis_switch" data-column="14" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Video of overall restaurant
+ <input type="checkbox" class="colvis_switch" data-column="15" checked /></label>
+                                                              </li>
+   
+                                    </ul>
+                                    </div>
+
+         <a href="create_URL" class="btn btn-rounded add-row-btn cma_add_button">Add <span class="material-icons">add</span></a>
+        </div>
+      `.replace("create_URL", create_URL))
+if ($(this).hasClass('make-active')) {
+        $('tbody', $(this)).children('tr').first().addClass('active-row');
+        setTimeout(() => {
+          $('.active-row td:visible:last').addClass('last-active-td');
+        }, 200);
+      }
+      $(this).closest(".dataTables_wrapper").find(".dt-global-search").on('keyup', function() {
+        table.search(this.value).draw();
+      });
+
+        }
+            else{
+            $(this).closest(".dataTables_wrapper").find(".dataTables__top").prepend(`
+        <div class="dataTables_buttons actions">
+         <div class="input-group prefix">
+                <span class="input-group-addon">
+                <i class="material-icons">search</i>
+                </span>
+                <input type="text" class="form-control dt-global-search" placeholder="Search..." />
+            </div>
+          <div class="dropdown actions__item cma_top_icon">
+            <i data-toggle="dropdown" class="material-icons">share</i>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <a href="javascript: void 0" class="dropdown-item" data-table-action="excel">Excel (.xlsx)</a>
+              <a href="javascript: void 0" class="dropdown-item" data-table-action="csv">CSV (.csv)</a>
+              <a href="javascript: void 0" class="dropdown-item" data-table-action="print">Print</a>
+            </ul>
+          </div>
+         <div class="dropdown actions__item cma_top_icon">
+                                    <i data-toggle="dropdown" class="material-icons">settings</i>
+                                    <ul class="dropdown-menu dropdown-menu-right ColVis_collection">
+                                    <li>
+                                                                <label><span class="material-icons">drag_indicator</span>special Features avail
+ <input type="checkbox" class="colvis_switch" data-column="0" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>video of Balcony
+ <input type="checkbox" class="colvis_switch" data-column="1" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>image of Balcony
+ <input type="checkbox" class="colvis_switch" data-column="2" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Image of kids play area
+ <input type="checkbox" class="colvis_switch" data-column="3" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Video of kids play area
+ <input type="checkbox" class="colvis_switch" data-column="4" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Image of cocktail
+ <input type="checkbox" class="colvis_switch" data-column="5" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Video of cocktail
+ <input type="checkbox" class="colvis_switch" data-column="6" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>opening time
+ <input type="checkbox" class="colvis_switch" data-column="7" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>closing time
+ <input type="checkbox" class="colvis_switch" data-column="8" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Contact Info
+ <input type="checkbox" class="colvis_switch" data-column="9" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Contact Mail
+ <input type="checkbox" class="colvis_switch" data-column="10" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>special feature for disability
+ <input type="checkbox" class="colvis_switch" data-column="11" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Walking stick available
+ <input type="checkbox" class="colvis_switch" data-column="12" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Wheel chair availability
+ <input type="checkbox" class="colvis_switch" data-column="13" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>image of entrance
+ <input type="checkbox" class="colvis_switch" data-column="14" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Video of overall restaurant
+ <input type="checkbox" class="colvis_switch" data-column="15" checked /></label>
+                                                              </li>
+   
+                                    </ul>
+                                    </div>
+        </div>
+      `)
+if ($(this).hasClass('make-active')) {
+        $('tbody', $(this)).children('tr').first().addClass('active-row');
+        setTimeout(() => {
+          $('.active-row td:visible:last').addClass('last-active-td');
+        }, 200);
+      }
+      $(this).closest(".dataTables_wrapper").find(".dt-global-search").on('keyup', function() {
+        table.search(this.value).draw();
+      });
+
+        }
+
+    }
+	 ,columns: [
+		{data: 'specialfeaturesavail_master',
+mRender: function (data, type, row) {
+var Actions_=getAutho('BasicInformation','list')
+ if(row["specialfeaturesavail_master"]==null) {
+ return '-' 
+}else {
+ 
+if(Actions_ !=  undefined)
+{
+var DETAIL_URL = "@Url.Action("detail", "BasicInformation")?id=" + row['specialfeaturesavail']
+return '<a  href="' + DETAIL_URL  + '">'+ row["specialfeaturesavail_master"]+ '</a>' 
+}else {
+ 
+return row['specialfeaturesavail_master'] 
+}
+}
+}},
+{data: 'videoofbalcony',mRender: function (data, type, row) {if(row["videoofbalcony"]==null) {
+ return '-' 
+}else {
+ 
+var uploaded_videoofbalcony = row["videoofbalcony"].split('|');
+var iterate = 1;
+                                            var collect_files="";
+                                            for (var i = 0; i < uploaded_videoofbalcony.length; i++) {
+
+
+	                                            if (uploaded_videoofbalcony[i] != "") {
+collect_files+='<a class="filedisplay" download href="' + uploaded_videoofbalcony[i] + '"><i class="fa fa-file"></i></a>'
+iterate = iterate + 1;
+	                                            }
+
+                                              
+                                            }return collect_files;  }}},
+{data: 'imageofbalcony',mRender: function (data, type, row) {if(row["imageofbalcony"]==null) {
+ return '-' 
+}else {
+ 
+var uploaded_imageofbalcony = row["imageofbalcony"].split('|');
+var iterate = 1;
+                                            var collect_files="";
+                                            var random_num=Math.floor(Math.random() * (100000 - 1 + 1) + 57);
+                                            for (var i = 0; i < uploaded_imageofbalcony.length; i++) {
+        
+
+	                                            if (uploaded_imageofbalcony[i] != "") {
+if(iterate==1)
+collect_files+='<a class="img'+random_num+'" href=' + uploaded_imageofbalcony[i] + '><img  class="disp_image '+random_num+'" style="width: 75px; height: 75px" src=' + uploaded_imageofbalcony[i] + '></a>'
+else
+collect_files+='<a class="img'+random_num+'" href=' + uploaded_imageofbalcony[i] + '><img class="disp_image '+random_num+'" style="display:none;width: 75px; height: 75px" src=' + uploaded_imageofbalcony[i] + '></a>'
+iterate = iterate + 1;
+	                                            }
+
+                                              
+                                            }
+$('body').on('click', 'a.img' + random_num + '', function(e) {
+e.preventDefault();
+$('.img' + random_num + '').colorbox({rel: $(this).attr('href'), width: "90%", height: "80%" });
+$.colorbox({open: true });
+});
+return collect_files;  }}},
+{data: 'imageofkidsplayarea',mRender: function (data, type, row) {if(row["imageofkidsplayarea"]==null) {
+ return '-' 
+}else {
+ 
+var uploaded_imageofkidsplayarea = row["imageofkidsplayarea"].split('|');
+var iterate = 1;
+                                            var collect_files="";
+                                            var random_num=Math.floor(Math.random() * (100000 - 1 + 1) + 57);
+                                            for (var i = 0; i < uploaded_imageofkidsplayarea.length; i++) {
+        
+
+	                                            if (uploaded_imageofkidsplayarea[i] != "") {
+if(iterate==1)
+collect_files+='<a class="img'+random_num+'" href=' + uploaded_imageofkidsplayarea[i] + '><img  class="disp_image '+random_num+'" style="width: 75px; height: 75px" src=' + uploaded_imageofkidsplayarea[i] + '></a>'
+else
+collect_files+='<a class="img'+random_num+'" href=' + uploaded_imageofkidsplayarea[i] + '><img class="disp_image '+random_num+'" style="display:none;width: 75px; height: 75px" src=' + uploaded_imageofkidsplayarea[i] + '></a>'
+iterate = iterate + 1;
+	                                            }
+
+                                              
+                                            }
+$('body').on('click', 'a.img' + random_num + '', function(e) {
+e.preventDefault();
+$('.img' + random_num + '').colorbox({rel: $(this).attr('href'), width: "90%", height: "80%" });
+$.colorbox({open: true });
+});
+return collect_files;  }}},
+{data: 'videoofkidsplayarea',mRender: function (data, type, row) {if(row["videoofkidsplayarea"]==null) {
+ return '-' 
+}else {
+ 
+var uploaded_videoofkidsplayarea = row["videoofkidsplayarea"].split('|');
+var iterate = 1;
+                                            var collect_files="";
+                                            for (var i = 0; i < uploaded_videoofkidsplayarea.length; i++) {
+
+
+	                                            if (uploaded_videoofkidsplayarea[i] != "") {
+collect_files+='<a class="filedisplay" download href="' + uploaded_videoofkidsplayarea[i] + '"><i class="fa fa-file"></i></a>'
+iterate = iterate + 1;
+	                                            }
+
+                                              
+                                            }return collect_files;  }}},
+{data: 'imageofcocktail',mRender: function (data, type, row) {if(row["imageofcocktail"]==null) {
+ return '-' 
+}else {
+ 
+var uploaded_imageofcocktail = row["imageofcocktail"].split('|');
+var iterate = 1;
+                                            var collect_files="";
+                                            var random_num=Math.floor(Math.random() * (100000 - 1 + 1) + 57);
+                                            for (var i = 0; i < uploaded_imageofcocktail.length; i++) {
+        
+
+	                                            if (uploaded_imageofcocktail[i] != "") {
+if(iterate==1)
+collect_files+='<a class="img'+random_num+'" href=' + uploaded_imageofcocktail[i] + '><img  class="disp_image '+random_num+'" style="width: 75px; height: 75px" src=' + uploaded_imageofcocktail[i] + '></a>'
+else
+collect_files+='<a class="img'+random_num+'" href=' + uploaded_imageofcocktail[i] + '><img class="disp_image '+random_num+'" style="display:none;width: 75px; height: 75px" src=' + uploaded_imageofcocktail[i] + '></a>'
+iterate = iterate + 1;
+	                                            }
+
+                                              
+                                            }
+$('body').on('click', 'a.img' + random_num + '', function(e) {
+e.preventDefault();
+$('.img' + random_num + '').colorbox({rel: $(this).attr('href'), width: "90%", height: "80%" });
+$.colorbox({open: true });
+});
+return collect_files;  }}},
+{data: 'videoofcocktail',mRender: function (data, type, row) {if(row["videoofcocktail"]==null) {
+ return '-' 
+}else {
+ 
+var uploaded_videoofcocktail = row["videoofcocktail"].split('|');
+var iterate = 1;
+                                            var collect_files="";
+                                            for (var i = 0; i < uploaded_videoofcocktail.length; i++) {
+
+
+	                                            if (uploaded_videoofcocktail[i] != "") {
+collect_files+='<a class="filedisplay" download href="' + uploaded_videoofcocktail[i] + '"><i class="fa fa-file"></i></a>'
+iterate = iterate + 1;
+	                                            }
+
+                                              
+                                            }return collect_files;  }}},
+{data: 'openingtime'},
+{data: 'closingtime'},
+{data: 'contactinfo',mRender: function (data, type, row) {if(row["contactinfo"]==null) {
+ return '-' 
+}else {
+ return '<a  href="tel:' + row["contactinfo"]+ '">'+ row["contactinfo"]+ '</a>' 
+}
+}},
+{data: 'contactmail',mRender: function (data, type, row) {if(row["contactmail"]==null) {
+ return '-' 
+}else {
+ return '<a  href="mailto:' + row["contactmail"]+ '">'+ row["contactmail"]+ '</a>' 
+}
+}},
+{data: 'specialfeaturefordisability'},
+{data: 'walkingstickavailable'},
+{data: 'wheelchairavailability'},
+{data: 'imageofentrance',mRender: function (data, type, row) {if(row["imageofentrance"]==null) {
+ return '-' 
+}else {
+ 
+var uploaded_imageofentrance = row["imageofentrance"].split('|');
+var iterate = 1;
+                                            var collect_files="";
+                                            var random_num=Math.floor(Math.random() * (100000 - 1 + 1) + 57);
+                                            for (var i = 0; i < uploaded_imageofentrance.length; i++) {
+        
+
+	                                            if (uploaded_imageofentrance[i] != "") {
+if(iterate==1)
+collect_files+='<a class="img'+random_num+'" href=' + uploaded_imageofentrance[i] + '><img  class="disp_image '+random_num+'" style="width: 75px; height: 75px" src=' + uploaded_imageofentrance[i] + '></a>'
+else
+collect_files+='<a class="img'+random_num+'" href=' + uploaded_imageofentrance[i] + '><img class="disp_image '+random_num+'" style="display:none;width: 75px; height: 75px" src=' + uploaded_imageofentrance[i] + '></a>'
+iterate = iterate + 1;
+	                                            }
+
+                                              
+                                            }
+$('body').on('click', 'a.img' + random_num + '', function(e) {
+e.preventDefault();
+$('.img' + random_num + '').colorbox({rel: $(this).attr('href'), width: "90%", height: "80%" });
+$.colorbox({open: true });
+});
+return collect_files;  }}},
+{data: 'videoofoverallrestaurant',mRender: function (data, type, row) {if(row["videoofoverallrestaurant"]==null) {
+ return '-' 
+}else {
+ 
+var uploaded_videoofoverallrestaurant = row["videoofoverallrestaurant"].split('|');
+var iterate = 1;
+                                            var collect_files="";
+                                            for (var i = 0; i < uploaded_videoofoverallrestaurant.length; i++) {
+
+
+	                                            if (uploaded_videoofoverallrestaurant[i] != "") {
+collect_files+='<a class="filedisplay" download href="' + uploaded_videoofoverallrestaurant[i] + '"><i class="fa fa-file"></i></a>'
+iterate = iterate + 1;
+	                                            }
+
+                                              
+                                            }return collect_files;  }}},
+
+		{
+                    "sName": "specialfeaturesavailid",
+                    "bSearchable": false,
+                    "bSortable": false,
+                    data: 'specialfeaturesavailid', "className": "dt-center",
+                    mRender: function(data, type, row) {
+                    var Actions=getAuthoController("specialfeaturesavail")
+                     var DETAIL_URL = "@Url.Action("detail", "specialfeaturesavail")?id=" + row["specialfeaturesavailid"]
+		var appendMessage='<a href="' + DETAIL_URL + '" class="dropdown-item">View</a>';
+                    if(Actions !=undefined)
+                    {
+                    for (var index = 0; index < Actions.length; ++index) {
+                    var entry = Actions[index];
+			 
+                    if(entry.viewname !="list" && entry.viewname !="list_verify_approved" && entry.viewname !="list_verify" && entry.viewname !="create" && entry.viewname !="post" && entry.viewname !="getall" && entry.viewname !="get" && entry.viewname !="check_user" && entry.viewname !="change_password"){
+                    var URL = "@Url.Action("entry.viewname", "specialfeaturesavail")?specialfeaturesavailid=" + row["specialfeaturesavailid"]
+                    URL = URL.replace("entry.viewname", entry.actionmethodname);
+			 
+                    if(entry.viewname=="delete")
+                    {
+	                    
+	                    appendMessage+='<a href="' + URL + '" class="dropdown-item deleteRecordFromTable">'+entry.actiondisplayname+'</a>' 	
+				   
+				
+                    }
+                    else
+                    {
+                     
+	                    appendMessage+='<a href="' + URL + '" class="dropdown-item">'+entry.actiondisplayname+'</a>' 
+                    }
+			 
+                    }					 
+						 
+                    }
+								
+                    if(appendMessage =="")
+                    {
+                    return '-'
+
+                    }
+                    else
+                    {
+                    return '<div class="dropdown actions__item">' +
+                    '<i data-toggle="dropdown" class="fa fa-ellipsis-h"></i>' +
+                    '<div class="dropdown-menu dropdown-menu-right">' + appendMessage +
+		 
+
+                    '</div>' +
+                    '</div>'
+                    }
+
+
+
+                    }
+                    else
+                    {
+                    return '-'
+
+                    }
+
+
+                    }
+                    }
+	
+
+	 ],
+	ajax: {
+	url: "@Url.Action("get_specialfeatures_avail_List", "specialfeaturesavail")",
+	type: 'GET',
+	dataType: 'json',
+	dataSrc: '',
+	data: sendFilterData,
+	error: function(jqXHR, textStatus, errorThrown) {
+	if (JSON.stringify(jqXHR.responseText) == "\"API Authorization failed\"")
+	{
+	swal({
+	title: 'Failed!',
+	text: jqXHR.responseText,
+	type: 'error',
+	buttonsStyling: false,
+	confirmButtonClass: 'btn btn-primary',
+	allowOutsideClick: false
+	}).then(function() {
+	window.location = "@Url.Action("AuthorizationFailed", "users")"
+	}) 
+	}
+	else
+	{
+		swal({
+		title: 'Contact Administrator !',
+		text: jqXHR.responseText,
+		type: 'error',
+		buttonsStyling: false,
+		confirmButtonClass: 'btn btn-primary'
+		}) 
+	}
+	}
+	}
+	})
+     
+	  
+ $('body').on('click', '.ColVis_collection li', function(a) {
+    event.stopPropagation();
+  });
+ 
+ $('body').on('change', '.colvis_switch', function(a) {
+    var column = table.column($(this).attr('data-column'));
+    column.visible(!column.visible());
+  });
+
+
+ 
+
+   
+	 
+
+
+	
+
+
+							
+					}
+                    	
+
+					$(document).ready(function () {
+
+
+					fill_specialfeaturesavail()
+
+
+					var Actions=getAutho("specialfeaturesavail","list")
+					if(Actions == undefined){
+					window.location = "@Url.Action("RoleAuthorizationFailed", "users")"
+					}
+
+
+
+
+					});
+					
+
+                    $("body").on("click", "[data-table-action]", function(a) {
+                    a.preventDefault();
+                    var b = $(this).data("table-action");
+                    console.log('dataTables_wrapper', $(this).closest(".dataTables_wrapper").find(".buttons-print"));
+                    if ("excel" === b && $(this).closest(".dataTables_wrapper").find(".buttons-excel").trigger("click"), "csv" === b && $(this).closest(".dataTables_wrapper").find(".buttons-csv").trigger("click"), "print" === b && $(this).closest(".dataTables_wrapper").find(".buttons-print").trigger("click"), "fullscreen" === b) {
+                    var c = $(this).closest(".card");
+                    c.hasClass("card--fullscreen") ? (c.removeClass("card--fullscreen"), $("body").removeClass("data-table-toggled")) : (c.addClass("card--fullscreen"), $("body").addClass("data-table-toggled"))
+                    }
+                    });
+					</script>
+					
+					
+					
+					
+								<script>
+								$(document).ready(function () {
+							 
+
+								$("#btnFilter").click(function(){
+								fill_specialfeaturesavail();
+								})
+								});
+								</script>
+
+
+					
+                    
+					

@@ -1,0 +1,270 @@
+
+			<!-- This code generated from Deliveries Powered by Mahat, Source Machine : 15.206.208.9 , Build Number : Build 14092021 #2021-09-014(Updated on 29102021 12:49) on 08/26/2023 08:42:42 -->
+			@using Microsoft.AspNetCore.Http
+			@inject IHttpContextAccessor HttpContextAccessor
+			@model AIData.Models.IndustyTypesModel
+			@{
+			ViewData["Title"] = "Add IndustyTypes";
+
+			Layout = "~/Views/Shared/_Layout.cshtml";
+			
+			}
+
+			@using(Html.BeginForm("Add_IndustyTypes", "IndustyTypes", FormMethod.Post, new { enctype="multipart/form-data", @id = "formId"}))
+			{
+
+			<div class="card card-block contCard"><!--Form_Main_Card-->
+				<div class="mobileHeader"><!--form_card_header-->
+					<div class="row">
+						<div class="col-sm-12 col-xs-12">
+							<h4 class="formHdr">Add IndustyTypes</h4>
+						</div>
+					</div>
+				</div><!--form_card_header-->
+				<!--form_error_display-->
+				@if(ViewData["message"] != null)
+				{
+				<div class="row">
+				<div class="col-sm-12 col-xs-12">
+				<div class="alert alert-danger alert-dismissible ">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">x</span>
+				</button>
+				Info :  @ViewData["message"]
+				</div>
+				</div>
+				</div>
+				}
+				
+				
+				 
+				
+				<!--form_error_display-->
+				<div class=""><!--form_inner_card-->
+					<div class="card-block"><!--form_inner_card_block-->
+					    @Html.HiddenFor(m => m.IndustyTypesid)
+						 
+
+						
+						<div class="row"><!--field_container_row-->
+							<!--fieldsStartsHere-->
+								
+								<div class="col-sm-3 col-xs-12 p-2 industryname_craftmyapp_container">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Industry Name</label>
+										<select name="industryname" id="industryname" class="form-control  "></select>
+
+									</div>
+									@Html.ValidationMessageFor(model => model.industryname)
+									<label id="industryname-error" class="help-block" style="display: none" for="industryname"></label>
+								</div>
+							</div>
+<div class="col-sm-3 col-xs-12 p-2 industrytypename_craftmyapp_container">
+						<div>
+							<div class="form-group" > 
+								<label>IndustryType Name</label>
+                                @Html.TextBoxFor(m => m.industrytypename, new {@type="text",@maxlength="128", @class = "form-control form-control-lg " })
+
+							     @Html.ValidationMessageFor(model => model.industrytypename)
+							</div>
+						</div>
+					</div>
+<div class="col-sm-12 col-xs-12 p-2 description_craftmyapp_container">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Description</label>
+										@Html.TextAreaFor(m => m.description, new {@minlength="0",@maxlength="256", @class = "form-control form-control-lg " })
+
+										<i class="form-group__bar" ></i>
+									</div>
+									@Html.ValidationMessageFor(model => model.description)
+									<label id="description-error" class="help-block" style="display: none" for="description"></label>
+								</div>
+							</div>
+
+
+							<!--fieldsEndsHere-->	
+						</div><!--field_container_row-->
+
+
+						<div class="card-block"><!--form_button_card_block-->
+							<button type="button" onclick="window.history.back()"  class="btn btn-secondary cma_cancel_button waves-effect">Cancel</button>
+							<button type="button" id="btnSubmit" class="btn cma_primary_button  waves-effect pull-right">Add IndustyTypes</button>
+						</div><!--form_button_card_block-->
+
+
+					</div><!--form_inner_card_block-->
+				</div><!--form_inner_card-->
+			</div><!--Form_Main_Card-->
+
+			}<!--EndFORM-->
+
+
+			
+			 
+			 <script type="text/javascript">
+				$(document).ready(function () {
+
+
+				var Actions=getAutho("IndustyTypes","create")
+				if(Actions == undefined){
+				window.location = "@Url.Action("RoleAuthorizationFailed", "users")"
+				}
+
+
+				});
+				</script>
+			
+			<script>
+var strindustryname;
+</script>
+@if (Model != null)
+{
+if(Model.industryname != null && Model.industryname.ToString() != "")
+{
+<script>
+strindustryname="@Model.industryname"
+</script>
+}
+}
+
+			
+			
+			
+			
+			<script>
+			
+			 
+			</script>
+			<script>
+	$(document).ready(function () {
+		
+			$('#formId').validate({
+                                        highlight: function(element) {
+                                        $(element).closest('.form-group').addClass('has-error');
+                                        $(element).closest('.form-group').removeClass('has-success');
+                                        $(element).addClass('form-control-error');
+                                        $(element).removeClass('form-control-success');
+                                        },
+                                        unhighlight: function(element) {
+                                        $(element).closest('.form-group').removeClass('has-error');
+                                        $(element).closest('.form-group').addClass('has-success');
+                                        $(element).addClass('form-control-success');
+                                        $(element).removeClass('form-control-error');
+                                        },
+                                        errorElement: 'span',
+                                        errorClass: 'help-block'
+                                        });
+
+			    var validator = $("#formId").validate({ /* settings */ });
+                                            $("#btnSubmit").click(function(){
+                                                if ($("#formId").valid()){
+                                                        $(".page-loader").show()
+
+														
+                                                        $("#formId").submit();
+                                                }else{
+                                                    validator.focusInvalid();
+                                                    swal({
+                                                        title: 'Validation Failed!',
+                                                        text: "Please check your entry",
+                                                        type: 'error',
+                                                        buttonsStyling: false,
+                                                        confirmButtonClass: 'btn btn-primary'
+                                                    })
+                                                }
+                                            })
+
+
+                                        })
+
+	 
+	</script>
+
+			
+			
+            
+
+			
+			<script>
+function lookup_IndustyTypes_industryname() {
+
+var sendFilterData = {
+	
+}
+
+$.ajax({
+url: '@Url.Action("lookup_IndustyTypes_industryname")',
+dataType: 'json',
+
+success: function(data) {
+
+       var ddltarget_industryname="#industryname"
+	    $(ddltarget_industryname).empty();
+		
+		$(ddltarget_industryname).append("<option value=''>Choose</option>");
+
+
+		
+
+		$.each(data, function(index, optionDataInner) {
+
+				    if(strindustryname== optionDataInner.Industriesid)
+					$(ddltarget_industryname).append('<option selected value=' + optionDataInner.Industriesid + '>' + optionDataInner.industryname+ '</option>')
+					else
+					$(ddltarget_industryname).append('<option  value=' + optionDataInner.Industriesid+ '>' + optionDataInner.industryname+ '</option>')
+								
+
+
+		});
+
+		
+
+	
+},
+error: function(jqXHR, textStatus, errorThrown) {
+if (JSON.stringify(jqXHR.responseText) == "\"API Authorization failed\"")
+{
+swal({
+title: 'Failed!',
+text: jqXHR.responseText,
+type: 'error',
+buttonsStyling: false,
+confirmButtonClass: 'btn btn-primary',
+allowOutsideClick: false
+}).then(function() {
+window.location = "@Url.Action("AuthorizationFailed", "users")"
+}) 
+}
+else
+{
+swal({
+title: 'Contact Administrator !',
+text: jqXHR.responseText,
+type: 'error',
+buttonsStyling: false,
+confirmButtonClass: 'btn btn-primary'
+}) 
+}
+}
+})
+
+}
+</script>
+<script>
+						$(document).ready(function(){
+
+							lookup_IndustyTypes_industryname()
+							
+
+
+						})
+						
+						</script>
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+2023-07-25 20:16:42.0492|ERROR|Admin.Controllers.usersController|Login|Error occured in - users / Login , Error Message : An error occurred while sending the request.|Execute at offset 16 in file:line:column <filename unknown>:0:0
+lambda_method at offset 97 in file:line:column <filename unknown>:0:0
+Login at offset 218 in file:line:column <filename unknown>:0:0
+
+2023-07-25 20:16:52.5439|ERROR|Admin.Controllers.usersController|Login|Error occured in - users / Login , Error Message : An error occurred while sending the request.|RunInternal at offset 118 in file:line:column <filename unknown>:0:0
+ExecutionContextCallback at offset 24 in file:line:column <filename unknown>:0:0
+MoveNext at offset 1103 in file:line:column C:\Users\lenovo\Downloads\webapp_Multilingual\Admin\Controllers\usersController.cs:818:7
+

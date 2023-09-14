@@ -1,0 +1,20 @@
+2023-08-29 10:01:25.4817|FATAL|Microsoft.AspNetCore.Hosting.WebHost||Application startup exception|BuildApplication at offset 377 in file:line:column <filename unknown>:0:0
+ApplicationError at offset 89 in file:line:column <filename unknown>:0:0
+ApplicationError at offset 200 in file:line:column <filename unknown>:0:0
+
+2023-08-29 10:01:54.8681|FATAL|Microsoft.AspNetCore.Hosting.WebHost||Application startup exception|BuildApplication at offset 377 in file:line:column <filename unknown>:0:0
+ApplicationError at offset 89 in file:line:column <filename unknown>:0:0
+ApplicationError at offset 200 in file:line:column <filename unknown>:0:0
+
+2023-08-29 10:04:26.2563|FATAL|Microsoft.AspNetCore.Hosting.WebHost||Application startup exception|BuildApplication at offset 377 in file:line:column <filename unknown>:0:0
+ApplicationError at offset 89 in file:line:column <filename unknown>:0:0
+ApplicationError at offset 200 in file:line:column <filename unknown>:0:0
+
+2023-08-29 10:24:09.5620|ERROR|AIDataWebApi.Controllers.tenantController|get_project_tenant|Could not find stored procedure 'get_project_tenant'.|Execute at offset 16 in file:line:column <filename unknown>:0:0
+lambda_method at offset 51 in file:line:column <filename unknown>:0:0
+get_project_tenant at offset 128 in file:line:column C:\Users\lenovo\Downloads\webapp_AIData\AIDataWebApi\Controllers\tenantController.cs:300:7
+
+2023-08-29 10:43:03.3849|ERROR|AIDataWebApi.Controllers.tenantController|get_project_tenant|Could not find stored procedure 'get_project_tenant'.|Execute at offset 16 in file:line:column <filename unknown>:0:0
+lambda_method at offset 51 in file:line:column <filename unknown>:0:0
+get_project_tenant at offset 128 in file:line:column C:\Users\lenovo\Downloads\webapp_AIData\AIDataWebApi\Controllers\tenantController.cs:300:7
+

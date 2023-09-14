@@ -1,0 +1,180 @@
+server {
+				listen       80;
+				server_name  sandbox83.craftmyapp.in;
+				location /Gmailconsole/{
+										proxy_pass "http://localhost:15260/";
+										proxy_http_version 1.1;
+										proxy_set_header Upgrade $http_upgrade;
+										proxy_set_header Connection keep-alive;
+										proxy_set_header Host $http_host;
+										proxy_cache_bypass $http_upgrade;
+										}
+location /productcatalog65/{
+									proxy_pass "http://localhost:13607/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /Expenditurenote64/{
+									proxy_pass "http://localhost:13727/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /Timemajesty/{
+									proxy_pass "http://localhost:13808/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /Menswear34/{
+									proxy_pass "http://localhost:13877/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /Fitnesswithk6/{
+									proxy_pass "http://localhost:13880/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /Dogadoption/{
+									proxy_pass "http://localhost:13916/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /DineandDiscover/{
+									proxy_pass "http://localhost:14120/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /packersandmovers/{
+									proxy_pass "http://localhost:14174/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /medicals/{
+									proxy_pass "http://localhost:14213/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /heightextra/{
+									proxy_pass "http://localhost:14222/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /Donationplatforms/Admin/{
+									proxy_pass "http://localhost:14501/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /Donationplatforms/DonationplatformsWebApi/{
+									proxy_pass "http://localhost:14503/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /Donationplatforms/Client/{
+									proxy_pass "http://localhost:14502/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /Timemajesty1/Admin/{
+									proxy_pass "http://localhost:14537/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /Timemajesty1/Timemajesty1WebApi/{
+									proxy_pass "http://localhost:14539/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /Timemajesty1/Client/{
+									proxy_pass "http://localhost:14538/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /Artgallery/{
+									proxy_pass "http://localhost:15149/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /userslist/{
+									proxy_pass "http://localhost:15206/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /Customerlist423/{
+									proxy_pass "http://localhost:15239/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+location /CustomerList29/{
+									proxy_pass "http://localhost:15245/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;
+									}
+
+
+					listen 443 ssl; # managed by Certbot
+ ssl_certificate /etc/letsencrypt/live/craftmyapp.in/fullchain.pem; # managed by Certbot
+
+ ssl_certificate_key /etc/letsencrypt/live/craftmyapp.in/privkey.pem; # managed by Certbot
+ include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+ ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+				}

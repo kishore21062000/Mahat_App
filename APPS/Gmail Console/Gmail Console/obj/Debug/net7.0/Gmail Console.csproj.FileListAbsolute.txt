@@ -1,0 +1,26 @@
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\Gmail Console.exe
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\Gmail Console.deps.json
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\Gmail Console.runtimeconfig.json
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\Gmail Console.dll
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\Gmail Console.pdb
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\Google.Apis.dll
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\Google.Apis.Auth.PlatformServices.dll
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\Google.Apis.Auth.dll
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\Google.Apis.Core.dll
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\Google.Apis.Gmail.v1.dll
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\MimeKit.dll
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\obj\Debug\net7.0\Gmail Console.csproj.AssemblyReference.cache
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\obj\Debug\net7.0\Gmail Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\obj\Debug\net7.0\Gmail Console.AssemblyInfoInputs.cache
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\obj\Debug\net7.0\Gmail Console.AssemblyInfo.cs
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\obj\Debug\net7.0\Gmail Console.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\obj\Debug\net7.0\Gmail Console.csproj.CopyComplete
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\obj\Debug\net7.0\Gmail Console.dll
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\obj\Debug\net7.0\refint\Gmail Console.dll
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\obj\Debug\net7.0\Gmail Console.pdb
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\obj\Debug\net7.0\Gmail Console.genruntimeconfig.cache
+C:\Users\lenovo\source\repos\Gmail Console\Gmail Console\obj\Debug\net7.0\ref\Gmail Console.dll

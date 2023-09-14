@@ -1,0 +1,690 @@
+
+			<!-- This code generated from Deliveries Powered by Mahat, Source Machine : 15.206.208.9 , Build Number : Build 14092021 #2021-09-014(Updated on 29102021 12:49) on 07/15/2023 15:36:11 -->
+			@using Microsoft.AspNetCore.Http
+			@inject IHttpContextAccessor HttpContextAccessor
+			@model DineandDiscover.Models.MenuandPricingModel
+			@{
+			ViewData["Title"] = "Add Menu and Pricing";
+
+			Layout = "~/Views/Shared/_Layout.cshtml";
+			
+			}
+
+			@using(Html.BeginForm("Add_Menu_and_Pricing", "MenuandPricing", FormMethod.Post, new { enctype="multipart/form-data", @id = "formId"}))
+			{
+
+			<div class="card card-block contCard"><!--Form_Main_Card-->
+				<div class="mobileHeader"><!--form_card_header-->
+					<div class="row">
+						<div class="col-sm-12 col-xs-12">
+							<h4 class="formHdr">Add Menu and Pricing</h4>
+						</div>
+					</div>
+				</div><!--form_card_header-->
+				<!--form_error_display-->
+				@if(ViewData["message"] != null)
+				{
+				<div class="row">
+				<div class="col-sm-12 col-xs-12">
+				<div class="alert alert-danger alert-dismissible ">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">x</span>
+				</button>
+				Info :  @ViewData["message"]
+				</div>
+				</div>
+				</div>
+				}
+				
+				
+				 
+				
+				<!--form_error_display-->
+				<div class=""><!--form_inner_card-->
+					<div class="card-block"><!--form_inner_card_block-->
+					    @Html.HiddenFor(m => m.MenuandPricingid)
+						 
+
+						
+						<div class="row"><!--field_container_row-->
+							<!--fieldsStartsHere-->
+								
+								<div class="col-sm-3 col-xs-12 p-2 menus_craftmyapp_container">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Menus :</label>
+										<select name="menus" id="menus" class="form-control  "></select>
+
+									</div>
+									@Html.ValidationMessageFor(model => model.menus)
+									<label id="menus-error" class="help-block" style="display: none" for="menus"></label>
+								</div>
+							</div>
+ 
+				<div class="col-sm-12 col-xs-12 mt-3"><!--form_group_div_block-->
+					<div class="card card-blue card-section cma_section_band">
+							<div class="card-head">
+								<header>Items:</header>
+							</div>
+							<div class="card-body card-container-Padding-NoShadow">
+								<div class="row">
+										<div class="col-sm-3 col-xs-12 p-2 foodi_craftmyapp_container">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>foodi</label>
+										<br><input type="file" multiple accept="image/*"  id="foodi" name="foodi">
+
+										<div id="foodiDisp" href=""></div>
+										<i class="form-group__bar" ></i>
+									</div>
+									@Html.ValidationMessageFor(model => model.foodi)
+									<label id="foodi-error" class="help-block" style="display: none" for="foodi"></label>
+								</div>
+							</div>
+<div class="col-sm-3 col-xs-12 p-2 food_craftmyapp_container">
+						<div>
+							<div class="form-group" > 
+								<label>foodn</label>
+                                @Html.TextBoxFor(m => m.food, new {@type="text",@maxlength="128", @class = "form-control form-control-lg " })
+
+							     @Html.ValidationMessageFor(model => model.food)
+							</div>
+						</div>
+					</div>
+
+								<div class="col-sm-3 col-xs-12 p-2 my-2 foodc_craftmyapp_container">
+                                    <div class="form-group">
+									<label>foodc</label><br>
+									<div class="input-group prefix">
+									    <span class="input-group-addon">&#8377;</span>
+									    @Html.TextBoxFor(m => m.foodc, new {@type="text",@min="0",@max="99999999", @class = "form-control form-control-lg " })
+
+									</div>
+								@Html.ValidationMessageFor(model => model.foodc)
+							    </div>
+								</div>
+
+
+								</div>
+							</div>
+					</div>
+				</div><!--form_group_div_block-->
+			 
+ 
+				<div class="col-sm-12 col-xs-12 mt-3"><!--form_group_div_block-->
+					<div class="card card-blue card-section cma_section_band">
+							<div class="card-head">
+								<header>items:</header>
+							</div>
+							<div class="card-body card-container-Padding-NoShadow">
+								<div class="row">
+										<div class="col-sm-3 col-xs-12 p-2 foodi1_craftmyapp_container">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>foodi1</label>
+										<br><input type="file" multiple accept="image/*"  id="foodi1" name="foodi1">
+
+										<div id="foodi1Disp" href=""></div>
+										<i class="form-group__bar" ></i>
+									</div>
+									@Html.ValidationMessageFor(model => model.foodi1)
+									<label id="foodi1-error" class="help-block" style="display: none" for="foodi1"></label>
+								</div>
+							</div>
+<div class="col-sm-3 col-xs-12 p-2 foodn1_craftmyapp_container">
+						<div>
+							<div class="form-group" > 
+								<label>foodn1</label>
+                                @Html.TextBoxFor(m => m.foodn1, new {@type="text",@maxlength="128", @class = "form-control form-control-lg " })
+
+							     @Html.ValidationMessageFor(model => model.foodn1)
+							</div>
+						</div>
+					</div>
+
+								<div class="col-sm-3 col-xs-12 p-2 my-2 foodc1_craftmyapp_container">
+                                    <div class="form-group">
+									<label>foodc1</label><br>
+									<div class="input-group prefix">
+									    <span class="input-group-addon">&#8377;</span>
+									    @Html.TextBoxFor(m => m.foodc1, new {@type="text",@min="0",@max="99999999", @class = "form-control form-control-lg " })
+
+									</div>
+								@Html.ValidationMessageFor(model => model.foodc1)
+							    </div>
+								</div>
+
+
+								</div>
+							</div>
+					</div>
+				</div><!--form_group_div_block-->
+			 
+ 
+				<div class="col-sm-12 col-xs-12 mt-3"><!--form_group_div_block-->
+					<div class="card card-blue card-section cma_section_band">
+							<div class="card-head">
+								<header>items3:</header>
+							</div>
+							<div class="card-body card-container-Padding-NoShadow">
+								<div class="row">
+										<div class="col-sm-3 col-xs-12 p-2 foodi2_craftmyapp_container">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>foodi2</label>
+										<br><input type="file" multiple accept="image/*"  id="foodi2" name="foodi2">
+
+										<div id="foodi2Disp" href=""></div>
+										<i class="form-group__bar" ></i>
+									</div>
+									@Html.ValidationMessageFor(model => model.foodi2)
+									<label id="foodi2-error" class="help-block" style="display: none" for="foodi2"></label>
+								</div>
+							</div>
+<div class="col-sm-3 col-xs-12 p-2 foodn2_craftmyapp_container">
+						<div>
+							<div class="form-group" > 
+								<label>foodn2</label>
+                                @Html.TextBoxFor(m => m.foodn2, new {@type="text",@maxlength="128", @class = "form-control form-control-lg " })
+
+							     @Html.ValidationMessageFor(model => model.foodn2)
+							</div>
+						</div>
+					</div>
+
+								<div class="col-sm-3 col-xs-12 p-2 my-2 foodc2_craftmyapp_container">
+                                    <div class="form-group">
+									<label>foodc2</label><br>
+									<div class="input-group prefix">
+									    <span class="input-group-addon">&#8377;</span>
+									    @Html.TextBoxFor(m => m.foodc2, new {@type="text",@min="0",@max="99999999", @class = "form-control form-control-lg " })
+
+									</div>
+								@Html.ValidationMessageFor(model => model.foodc2)
+							    </div>
+								</div>
+
+
+								</div>
+							</div>
+					</div>
+				</div><!--form_group_div_block-->
+			 
+ 
+				<div class="col-sm-12 col-xs-12 mt-3"><!--form_group_div_block-->
+					<div class="card card-blue card-section cma_section_band">
+							<div class="card-head">
+								<header>items4:</header>
+							</div>
+							<div class="card-body card-container-Padding-NoShadow">
+								<div class="row">
+										<div class="col-sm-3 col-xs-12 p-2 foodi3_craftmyapp_container">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>foodi3</label>
+										<br><input type="file" multiple accept="image/*"  id="foodi3" name="foodi3">
+
+										<div id="foodi3Disp" href=""></div>
+										<i class="form-group__bar" ></i>
+									</div>
+									@Html.ValidationMessageFor(model => model.foodi3)
+									<label id="foodi3-error" class="help-block" style="display: none" for="foodi3"></label>
+								</div>
+							</div>
+<div class="col-sm-3 col-xs-12 p-2 foodn3_craftmyapp_container">
+						<div>
+							<div class="form-group" > 
+								<label>foodn3</label>
+                                @Html.TextBoxFor(m => m.foodn3, new {@type="text",@maxlength="128", @class = "form-control form-control-lg " })
+
+							     @Html.ValidationMessageFor(model => model.foodn3)
+							</div>
+						</div>
+					</div>
+
+								<div class="col-sm-3 col-xs-12 p-2 my-2 foodc3_craftmyapp_container">
+                                    <div class="form-group">
+									<label>foodc3</label><br>
+									<div class="input-group prefix">
+									    <span class="input-group-addon">&#8377;</span>
+									    @Html.TextBoxFor(m => m.foodc3, new {@type="text",@min="0",@max="99999999", @class = "form-control form-control-lg " })
+
+									</div>
+								@Html.ValidationMessageFor(model => model.foodc3)
+							    </div>
+								</div>
+
+
+								</div>
+							</div>
+					</div>
+				</div><!--form_group_div_block-->
+			 
+ 
+				<div class="col-sm-12 col-xs-12 mt-3"><!--form_group_div_block-->
+					<div class="card card-blue card-section cma_section_band">
+							<div class="card-head">
+								<header>items5:</header>
+							</div>
+							<div class="card-body card-container-Padding-NoShadow">
+								<div class="row">
+										<div class="col-sm-3 col-xs-12 p-2 foodi4_craftmyapp_container">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>foodi4</label>
+										<br><input type="file" multiple accept="image/*"  id="foodi4" name="foodi4">
+
+										<div id="foodi4Disp" href=""></div>
+										<i class="form-group__bar" ></i>
+									</div>
+									@Html.ValidationMessageFor(model => model.foodi4)
+									<label id="foodi4-error" class="help-block" style="display: none" for="foodi4"></label>
+								</div>
+							</div>
+<div class="col-sm-3 col-xs-12 p-2 foodn4_craftmyapp_container">
+						<div>
+							<div class="form-group" > 
+								<label>foodn4</label>
+                                @Html.TextBoxFor(m => m.foodn4, new {@type="text",@maxlength="128", @class = "form-control form-control-lg " })
+
+							     @Html.ValidationMessageFor(model => model.foodn4)
+							</div>
+						</div>
+					</div>
+
+								<div class="col-sm-3 col-xs-12 p-2 my-2 foodc4_craftmyapp_container">
+                                    <div class="form-group">
+									<label>foodc4</label><br>
+									<div class="input-group prefix">
+									    <span class="input-group-addon">&#8377;</span>
+									    @Html.TextBoxFor(m => m.foodc4, new {@type="text",@min="0",@max="99999999", @class = "form-control form-control-lg " })
+
+									</div>
+								@Html.ValidationMessageFor(model => model.foodc4)
+							    </div>
+								</div>
+
+
+								</div>
+							</div>
+					</div>
+				</div><!--form_group_div_block-->
+			 
+
+
+							<!--fieldsEndsHere-->	
+						</div><!--field_container_row-->
+
+
+						<div class="card-block"><!--form_button_card_block-->
+							<button type="button" onclick="window.history.back()"  class="btn btn-secondary cma_cancel_button waves-effect">Cancel</button>
+							<button type="button" id="btnSubmit" class="btn cma_primary_button  waves-effect pull-right">Add Menu and Pricing</button>
+						</div><!--form_button_card_block-->
+
+
+					</div><!--form_inner_card_block-->
+				</div><!--form_inner_card-->
+			</div><!--Form_Main_Card-->
+
+			}<!--EndFORM-->
+
+
+			
+			 
+			 <script type="text/javascript">
+				$(document).ready(function () {
+
+
+				var Actions=getAutho("MenuandPricing","create")
+				if(Actions == undefined){
+				window.location = "@Url.Action("RoleAuthorizationFailed", "users")"
+				}
+
+
+				});
+				</script>
+			
+			<script>
+var strmenus;
+</script>
+@if (Model != null)
+{
+if(Model.menus != null && Model.menus.ToString() != "")
+{
+<script>
+strmenus="@Model.menus"
+</script>
+}
+}
+<script>
+var strfoodi;
+</script>
+@if (Model != null)
+{
+if(Model.foodi != null && Model.foodi.ToString() != "")
+{
+<script>
+var uploaded_foodi = "@Model.foodi".split('|');
+                                            var iterate = 0;
+                                            for (var i = 0; i < uploaded_foodi.length; i++) {
+
+
+	                                            if (uploaded_foodi[i] != "") {
+		                                            iterate = iterate + 1;
+		                                            if (iterate == 1)
+			                                            $('#foodiDisp').append('<a href=' + uploaded_foodi[i] + ' class="imgfoodi auto_clr_photo"><img  src=' + uploaded_foodi[i] + ' width="100px" /></a>')
+		                                            else
+
+			                                            $('#foodiDisp').append('<div style="display:none"> <a href=' + uploaded_foodi[i] + ' class="imgfoodi auto_clr_photo"><img  src=' + uploaded_foodi[i] + ' width="100px" /></a></div>')
+		 
+	                                            }
+
+
+                                            }
+$('body').on('click', 'a.imgfoodi', function (e) {
+                            e.preventDefault();
+                            $('.imgfoodi').colorbox({ rel: '.imgfoodi', width: "90%", height: "80%" });
+                            $.colorbox({ open: true });
+                            });
+</script>
+}
+}
+<link href="~/components/jquery-colorbox/colorbox.css" rel="stylesheet" />
+								<script src="~/components/jquery-colorbox/jquery.colorbox.js"></script> 
+<script>
+$(document).ready(function () {
+$("#foodc").autoNumeric('init',{aSep: '',vMin: '0.00',vMax: '99999999.00'})
+})
+</script>
+<script>
+var strfoodi1;
+</script>
+@if (Model != null)
+{
+if(Model.foodi1 != null && Model.foodi1.ToString() != "")
+{
+<script>
+var uploaded_foodi1 = "@Model.foodi1".split('|');
+                                            var iterate = 0;
+                                            for (var i = 0; i < uploaded_foodi1.length; i++) {
+
+
+	                                            if (uploaded_foodi1[i] != "") {
+		                                            iterate = iterate + 1;
+		                                            if (iterate == 1)
+			                                            $('#foodi1Disp').append('<a href=' + uploaded_foodi1[i] + ' class="imgfoodi1 auto_clr_photo"><img  src=' + uploaded_foodi1[i] + ' width="100px" /></a>')
+		                                            else
+
+			                                            $('#foodi1Disp').append('<div style="display:none"> <a href=' + uploaded_foodi1[i] + ' class="imgfoodi1 auto_clr_photo"><img  src=' + uploaded_foodi1[i] + ' width="100px" /></a></div>')
+		 
+	                                            }
+
+
+                                            }
+$('body').on('click', 'a.imgfoodi1', function (e) {
+                            e.preventDefault();
+                            $('.imgfoodi1').colorbox({ rel: '.imgfoodi1', width: "90%", height: "80%" });
+                            $.colorbox({ open: true });
+                            });
+</script>
+}
+}
+<script>
+$(document).ready(function () {
+$("#foodc1").autoNumeric('init',{aSep: '',vMin: '0.00',vMax: '99999999.00'})
+})
+</script>
+<script>
+var strfoodi2;
+</script>
+@if (Model != null)
+{
+if(Model.foodi2 != null && Model.foodi2.ToString() != "")
+{
+<script>
+var uploaded_foodi2 = "@Model.foodi2".split('|');
+                                            var iterate = 0;
+                                            for (var i = 0; i < uploaded_foodi2.length; i++) {
+
+
+	                                            if (uploaded_foodi2[i] != "") {
+		                                            iterate = iterate + 1;
+		                                            if (iterate == 1)
+			                                            $('#foodi2Disp').append('<a href=' + uploaded_foodi2[i] + ' class="imgfoodi2 auto_clr_photo"><img  src=' + uploaded_foodi2[i] + ' width="100px" /></a>')
+		                                            else
+
+			                                            $('#foodi2Disp').append('<div style="display:none"> <a href=' + uploaded_foodi2[i] + ' class="imgfoodi2 auto_clr_photo"><img  src=' + uploaded_foodi2[i] + ' width="100px" /></a></div>')
+		 
+	                                            }
+
+
+                                            }
+$('body').on('click', 'a.imgfoodi2', function (e) {
+                            e.preventDefault();
+                            $('.imgfoodi2').colorbox({ rel: '.imgfoodi2', width: "90%", height: "80%" });
+                            $.colorbox({ open: true });
+                            });
+</script>
+}
+}
+<script>
+$(document).ready(function () {
+$("#foodc2").autoNumeric('init',{aSep: '',vMin: '0.00',vMax: '99999999.00'})
+})
+</script>
+<script>
+var strfoodi3;
+</script>
+@if (Model != null)
+{
+if(Model.foodi3 != null && Model.foodi3.ToString() != "")
+{
+<script>
+var uploaded_foodi3 = "@Model.foodi3".split('|');
+                                            var iterate = 0;
+                                            for (var i = 0; i < uploaded_foodi3.length; i++) {
+
+
+	                                            if (uploaded_foodi3[i] != "") {
+		                                            iterate = iterate + 1;
+		                                            if (iterate == 1)
+			                                            $('#foodi3Disp').append('<a href=' + uploaded_foodi3[i] + ' class="imgfoodi3 auto_clr_photo"><img  src=' + uploaded_foodi3[i] + ' width="100px" /></a>')
+		                                            else
+
+			                                            $('#foodi3Disp').append('<div style="display:none"> <a href=' + uploaded_foodi3[i] + ' class="imgfoodi3 auto_clr_photo"><img  src=' + uploaded_foodi3[i] + ' width="100px" /></a></div>')
+		 
+	                                            }
+
+
+                                            }
+$('body').on('click', 'a.imgfoodi3', function (e) {
+                            e.preventDefault();
+                            $('.imgfoodi3').colorbox({ rel: '.imgfoodi3', width: "90%", height: "80%" });
+                            $.colorbox({ open: true });
+                            });
+</script>
+}
+}
+<script>
+$(document).ready(function () {
+$("#foodc3").autoNumeric('init',{aSep: '',vMin: '0.00',vMax: '99999999.00'})
+})
+</script>
+<script>
+var strfoodi4;
+</script>
+@if (Model != null)
+{
+if(Model.foodi4 != null && Model.foodi4.ToString() != "")
+{
+<script>
+var uploaded_foodi4 = "@Model.foodi4".split('|');
+                                            var iterate = 0;
+                                            for (var i = 0; i < uploaded_foodi4.length; i++) {
+
+
+	                                            if (uploaded_foodi4[i] != "") {
+		                                            iterate = iterate + 1;
+		                                            if (iterate == 1)
+			                                            $('#foodi4Disp').append('<a href=' + uploaded_foodi4[i] + ' class="imgfoodi4 auto_clr_photo"><img  src=' + uploaded_foodi4[i] + ' width="100px" /></a>')
+		                                            else
+
+			                                            $('#foodi4Disp').append('<div style="display:none"> <a href=' + uploaded_foodi4[i] + ' class="imgfoodi4 auto_clr_photo"><img  src=' + uploaded_foodi4[i] + ' width="100px" /></a></div>')
+		 
+	                                            }
+
+
+                                            }
+$('body').on('click', 'a.imgfoodi4', function (e) {
+                            e.preventDefault();
+                            $('.imgfoodi4').colorbox({ rel: '.imgfoodi4', width: "90%", height: "80%" });
+                            $.colorbox({ open: true });
+                            });
+</script>
+}
+}
+<script>
+$(document).ready(function () {
+$("#foodc4").autoNumeric('init',{aSep: '',vMin: '0.00',vMax: '99999999.00'})
+})
+</script>
+
+			
+			
+			
+			
+			<script>
+			
+			 
+			</script>
+			<script>
+	$(document).ready(function () {
+		
+			$('#formId').validate({
+                                        highlight: function(element) {
+                                        $(element).closest('.form-group').addClass('has-error');
+                                        $(element).closest('.form-group').removeClass('has-success');
+                                        $(element).addClass('form-control-error');
+                                        $(element).removeClass('form-control-success');
+                                        },
+                                        unhighlight: function(element) {
+                                        $(element).closest('.form-group').removeClass('has-error');
+                                        $(element).closest('.form-group').addClass('has-success');
+                                        $(element).addClass('form-control-success');
+                                        $(element).removeClass('form-control-error');
+                                        },
+                                        errorElement: 'span',
+                                        errorClass: 'help-block'
+                                        });
+
+			    var validator = $("#formId").validate({ /* settings */ });
+                                            $("#btnSubmit").click(function(){
+                                                if ($("#formId").valid()){
+                                                        $(".page-loader").show()
+
+														
+                                                        $("#formId").submit();
+                                                }else{
+                                                    validator.focusInvalid();
+                                                    swal({
+                                                        title: 'Validation Failed!',
+                                                        text: "Please check your entry",
+                                                        type: 'error',
+                                                        buttonsStyling: false,
+                                                        confirmButtonClass: 'btn btn-primary'
+                                                    })
+                                                }
+                                            })
+
+
+                                        })
+
+	 
+	</script>
+
+			
+			
+            
+
+			
+			<script>
+function lookup_MenuandPricing_menus() {
+
+var sendFilterData = {
+	
+}
+
+$.ajax({
+url: '@Url.Action("lookup_MenuandPricing_menus")',
+dataType: 'json',
+
+success: function(data) {
+
+       var ddltarget_menus="#menus"
+	    $(ddltarget_menus).empty();
+		
+		$(ddltarget_menus).append("<option value=''>Choose</option>");
+
+
+		
+
+		$.each(data, function(index, optionDataInner) {
+
+				    if(strmenus== optionDataInner.BasicInformationid)
+					$(ddltarget_menus).append('<option selected value=' + optionDataInner.BasicInformationid + '>' + optionDataInner.nameoftherestaurant+ '</option>')
+					else
+					$(ddltarget_menus).append('<option  value=' + optionDataInner.BasicInformationid+ '>' + optionDataInner.nameoftherestaurant+ '</option>')
+								
+
+
+		});
+
+		
+
+	
+},
+error: function(jqXHR, textStatus, errorThrown) {
+if (JSON.stringify(jqXHR.responseText) == "\"API Authorization failed\"")
+{
+swal({
+title: 'Failed!',
+text: jqXHR.responseText,
+type: 'error',
+buttonsStyling: false,
+confirmButtonClass: 'btn btn-primary',
+allowOutsideClick: false
+}).then(function() {
+window.location = "@Url.Action("AuthorizationFailed", "users")"
+}) 
+}
+else
+{
+swal({
+title: 'Contact Administrator !',
+text: jqXHR.responseText,
+type: 'error',
+buttonsStyling: false,
+confirmButtonClass: 'btn btn-primary'
+}) 
+}
+}
+})
+
+}
+</script>
+<script>
+						$(document).ready(function(){
+
+							lookup_MenuandPricing_menus()
+							
+
+
+						})
+						
+						</script>
+
+
+
+
+
+

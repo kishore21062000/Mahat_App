@@ -1,0 +1,10 @@
+C:\Users\lenovo\Downloads\webapp_DineandDiscover\DineandDiscover.Models\bin\Debug\netcoreapp3.1\DineandDiscover.Models.deps.json
+C:\Users\lenovo\Downloads\webapp_DineandDiscover\DineandDiscover.Models\bin\Debug\netcoreapp3.1\DineandDiscover.Models.dll
+C:\Users\lenovo\Downloads\webapp_DineandDiscover\DineandDiscover.Models\bin\Debug\netcoreapp3.1\DineandDiscover.Models.pdb
+C:\Users\lenovo\Downloads\webapp_DineandDiscover\DineandDiscover.Models\obj\Debug\netcoreapp3.1\DineandDiscover.Models.csproj.AssemblyReference.cache
+C:\Users\lenovo\Downloads\webapp_DineandDiscover\DineandDiscover.Models\obj\Debug\netcoreapp3.1\DineandDiscover.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Downloads\webapp_DineandDiscover\DineandDiscover.Models\obj\Debug\netcoreapp3.1\DineandDiscover.Models.AssemblyInfoInputs.cache
+C:\Users\lenovo\Downloads\webapp_DineandDiscover\DineandDiscover.Models\obj\Debug\netcoreapp3.1\DineandDiscover.Models.AssemblyInfo.cs
+C:\Users\lenovo\Downloads\webapp_DineandDiscover\DineandDiscover.Models\obj\Debug\netcoreapp3.1\DineandDiscover.Models.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Downloads\webapp_DineandDiscover\DineandDiscover.Models\obj\Debug\netcoreapp3.1\DineandDiscover.Models.dll
+C:\Users\lenovo\Downloads\webapp_DineandDiscover\DineandDiscover.Models\obj\Debug\netcoreapp3.1\DineandDiscover.Models.pdb

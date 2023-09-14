@@ -1,0 +1,621 @@
+
+					<!--This code generated from Deliveries Powered by Mahat, Source Machine : 15.206.208.9 , Build Number : Build 14092021 #2021-09-014(Updated on 29102021 12:49) on 07/16/2023 14:54:51 -->
+					@using Microsoft.AspNetCore.Http
+					@inject IHttpContextAccessor HttpContextAccessor
+					@model DineandDiscover.Models.SpecialEventandServicesModel
+					@{
+					ViewData["Title"] = "Special Event and Services List";
+					Layout = "~/Views/Shared/_Layout.cshtml";
+					}
+
+					<div class="card " style="padding:20px;">
+					<div class="mobileHeader"><!--form_card_header-->
+					<div class="row">
+					<div class="col-sm-12 col-xs-12">
+					<h3 class="formHdr">Special Event and Services List</h3>
+					</div>
+					</div>
+					</div><!--form_card_header-->
+					<div class="card-body" style="padding:1px;padding-top:0px;">
+
+					@if(TempData["errMessage"] != null)
+					{
+					<div class="row">
+					<div class="col-sm-12 col-xs-12">
+					<div class="alert alert-danger alert-dismissible ">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">x</span>
+					</button>
+					Info :  @TempData["errMessage"]
+					</div>
+					</div>
+					</div>
+					}
+
+					@if(TempData["message"] != null)
+					{
+					<div class="row">
+					<div class="col-sm-12 col-xs-12">
+					<div class="alert alert-success alert-dismissible ">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">x</span>
+					</button>
+					Info :  @TempData["message"]
+					</div>
+					</div>
+					</div>
+					}
+
+					<input type="hidden" id="SpecialEventandServicesid" name="SpecialEventandServicesid"/>
+					<div class="row">
+					
+
+					</div>
+
+					<div class="row"><div class="col-sm-12 col-xs-12">
+					<div class="table-responsive" style="margin:0px;">
+					<table id="tblSpecialEventandServices" class="table order-column hover responsive nowrap" width="100%" style="margin:0px; ">
+					<thead class="thead-default">
+					<tr>
+					<th>Special Event and Services</th>
+<th>D Event 1</th>
+<th>D Event 2</th>
+<th>D Event 3</th>
+<th>U Event 1</th>
+<th>U Event 2</th>
+<th>U Event 3</th>
+<th>S Event 1</th>
+<th>S Event 2</th>
+<th>S Event 3</th>
+<th>S Event 4</th>
+<th>S Event 5</th>
+<th>Delivery condition as per charge  indication</th>
+<th>Delivery Available </th>
+<th>Payment  url :</th>
+<th>Payment  Qrcode :</th>
+<th>Payment Mobile Number : </th>
+<th>Pay Offline</th>
+
+					<th class="all">Action</th>
+					
+
+					</tr>
+					</thead>
+					<tbody></tbody>
+					
+					</table>
+					</div>
+
+					</div>
+					
+					
+					</div>
+					
+					</div>
+					</div>
+					
+                    <link href="~/components/jquery-colorbox/colorbox.css" rel="stylesheet" />
+                    <script src="~/components/jquery-colorbox/jquery.colorbox.js"></script>
+                    <link href="~/css/GallaryContent/style.css" rel="stylesheet" />
+                    <link href="~/components/starrr/starrr.css" rel="stylesheet" />
+					
+					<script type="text/javascript">
+
+                 
+
+					function fill_SpecialEventandServices()
+					{
+						
+
+					var sendFilterData = {
+							  		
+								}
+
+					
+
+
+					var table=$("#tblSpecialEventandServices").DataTable({
+columnDefs: [{ 
+     targets: -1,
+     title: '<i class="fa fa-pencil fa-lg"></i>'
+  }],
+		destroy:true,
+	"order": [],"aaSorting": [],
+ 	autoWidth: !1,
+	responsive:!0,
+	lengthMenu: [
+	[15, 30, 45, -1],
+	["15 Rows", "30 Rows", "45 Rows", "Everything"]
+	],
+	language: {
+	searchPlaceholder: "Search for records..."
+	},
+	 language: { search: '<i class="fa fa-search"></i>', searchPlaceholder: "Search for records..." },
+	dom: "Bfrtip", sDom: '<"dataTables__top"lfB>rt<"dataTables__bottom"ip><"clear">',
+  
+	buttons: [{
+	extend: "excelHtml5",
+	title: "List Of SpecialEventandServices Data"
+	}, {
+	extend: "csvHtml5",
+	title: "List Of SpecialEventandServices Data"
+	}, {
+	extend: "print",
+	title: "List Of SpecialEventandServices Data"
+	}],
+ initComplete: function(a, b) {
+
+
+
+      $(this).closest(".dataTables_wrapper").find(".dt-buttons").hide();
+      
+if ($('#btnFilter').length) {
+     $(this).closest(".dataTables_wrapper").find(".dataTables_length").prepend(`
+        <i class="automatonShowFilter actions__item mdi material-icons">filter_alt</i>
+      `);
+ }
+var Actions=getAutho("SpecialEventandServices","create")
+		if(Actions != undefined){
+			var create_URL = "@Url.Action("entry.viewname", "SpecialEventandServices")"
+		    create_URL = create_URL.replace("entry.viewname", Actions.actionmethodname);
+            
+            $(this).closest(".dataTables_wrapper").find(".dataTables__top").prepend(`
+        <div class="dataTables_buttons actions">
+           <div class="input-group prefix">
+                <span class="input-group-addon">
+                <i class="material-icons">search</i>
+                </span>
+                <input type="text" class="form-control dt-global-search" placeholder="Search..." />
+            </div>
+          <div class="dropdown actions__item cma_top_icon">
+            <i data-toggle="dropdown" class="material-icons">share</i>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <a href="javascript: void 0" class="dropdown-item" data-table-action="excel">Excel (.xlsx)</a>
+              <a href="javascript: void 0" class="dropdown-item" data-table-action="csv">CSV (.csv)</a>
+              <a href="javascript: void 0" class="dropdown-item" data-table-action="print">Print</a>
+            </ul>
+          </div>
+         <div class="dropdown actions__item cma_top_icon">
+                                    <i data-toggle="dropdown" class="material-icons">settings</i>
+                                    <ul class="dropdown-menu dropdown-menu-right ColVis_collection">
+                                    <li>
+                                                                <label><span class="material-icons">drag_indicator</span>Special Event and Services
+ <input type="checkbox" class="colvis_switch" data-column="0" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>D Event 1
+ <input type="checkbox" class="colvis_switch" data-column="1" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>D Event 2
+ <input type="checkbox" class="colvis_switch" data-column="2" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>D Event 3
+ <input type="checkbox" class="colvis_switch" data-column="3" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>U Event 1
+ <input type="checkbox" class="colvis_switch" data-column="4" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>U Event 2
+ <input type="checkbox" class="colvis_switch" data-column="5" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>U Event 3
+ <input type="checkbox" class="colvis_switch" data-column="6" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>S Event 1
+ <input type="checkbox" class="colvis_switch" data-column="7" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>S Event 2
+ <input type="checkbox" class="colvis_switch" data-column="8" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>S Event 3
+ <input type="checkbox" class="colvis_switch" data-column="9" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>S Event 4
+ <input type="checkbox" class="colvis_switch" data-column="10" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>S Event 5
+ <input type="checkbox" class="colvis_switch" data-column="11" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Delivery condition as per charge  indication
+ <input type="checkbox" class="colvis_switch" data-column="12" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Delivery Available 
+ <input type="checkbox" class="colvis_switch" data-column="13" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Payment  url :
+ <input type="checkbox" class="colvis_switch" data-column="14" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Payment  Qrcode :
+ <input type="checkbox" class="colvis_switch" data-column="15" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Payment Mobile Number : 
+ <input type="checkbox" class="colvis_switch" data-column="16" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Pay Offline
+ <input type="checkbox" class="colvis_switch" data-column="17" checked /></label>
+                                                              </li>
+   
+                                    </ul>
+                                    </div>
+
+         <a href="create_URL" class="btn btn-rounded add-row-btn cma_add_button">Add <span class="material-icons">add</span></a>
+        </div>
+      `.replace("create_URL", create_URL))
+if ($(this).hasClass('make-active')) {
+        $('tbody', $(this)).children('tr').first().addClass('active-row');
+        setTimeout(() => {
+          $('.active-row td:visible:last').addClass('last-active-td');
+        }, 200);
+      }
+      $(this).closest(".dataTables_wrapper").find(".dt-global-search").on('keyup', function() {
+        table.search(this.value).draw();
+      });
+
+        }
+            else{
+            $(this).closest(".dataTables_wrapper").find(".dataTables__top").prepend(`
+        <div class="dataTables_buttons actions">
+         <div class="input-group prefix">
+                <span class="input-group-addon">
+                <i class="material-icons">search</i>
+                </span>
+                <input type="text" class="form-control dt-global-search" placeholder="Search..." />
+            </div>
+          <div class="dropdown actions__item cma_top_icon">
+            <i data-toggle="dropdown" class="material-icons">share</i>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <a href="javascript: void 0" class="dropdown-item" data-table-action="excel">Excel (.xlsx)</a>
+              <a href="javascript: void 0" class="dropdown-item" data-table-action="csv">CSV (.csv)</a>
+              <a href="javascript: void 0" class="dropdown-item" data-table-action="print">Print</a>
+            </ul>
+          </div>
+         <div class="dropdown actions__item cma_top_icon">
+                                    <i data-toggle="dropdown" class="material-icons">settings</i>
+                                    <ul class="dropdown-menu dropdown-menu-right ColVis_collection">
+                                    <li>
+                                                                <label><span class="material-icons">drag_indicator</span>Special Event and Services
+ <input type="checkbox" class="colvis_switch" data-column="0" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>D Event 1
+ <input type="checkbox" class="colvis_switch" data-column="1" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>D Event 2
+ <input type="checkbox" class="colvis_switch" data-column="2" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>D Event 3
+ <input type="checkbox" class="colvis_switch" data-column="3" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>U Event 1
+ <input type="checkbox" class="colvis_switch" data-column="4" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>U Event 2
+ <input type="checkbox" class="colvis_switch" data-column="5" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>U Event 3
+ <input type="checkbox" class="colvis_switch" data-column="6" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>S Event 1
+ <input type="checkbox" class="colvis_switch" data-column="7" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>S Event 2
+ <input type="checkbox" class="colvis_switch" data-column="8" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>S Event 3
+ <input type="checkbox" class="colvis_switch" data-column="9" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>S Event 4
+ <input type="checkbox" class="colvis_switch" data-column="10" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>S Event 5
+ <input type="checkbox" class="colvis_switch" data-column="11" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Delivery condition as per charge  indication
+ <input type="checkbox" class="colvis_switch" data-column="12" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Delivery Available 
+ <input type="checkbox" class="colvis_switch" data-column="13" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Payment  url :
+ <input type="checkbox" class="colvis_switch" data-column="14" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Payment  Qrcode :
+ <input type="checkbox" class="colvis_switch" data-column="15" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Payment Mobile Number : 
+ <input type="checkbox" class="colvis_switch" data-column="16" checked /></label>
+                                                              </li>
+<li>
+                                                                <label><span class="material-icons">drag_indicator</span>Pay Offline
+ <input type="checkbox" class="colvis_switch" data-column="17" checked /></label>
+                                                              </li>
+   
+                                    </ul>
+                                    </div>
+        </div>
+      `)
+if ($(this).hasClass('make-active')) {
+        $('tbody', $(this)).children('tr').first().addClass('active-row');
+        setTimeout(() => {
+          $('.active-row td:visible:last').addClass('last-active-td');
+        }, 200);
+      }
+      $(this).closest(".dataTables_wrapper").find(".dt-global-search").on('keyup', function() {
+        table.search(this.value).draw();
+      });
+
+        }
+
+    }
+	 ,columns: [
+		{data: 'specialeventandservices_master',
+mRender: function (data, type, row) {
+var Actions_=getAutho('BasicInformation','list')
+ if(row["specialeventandservices_master"]==null) {
+ return '-' 
+}else {
+ 
+if(Actions_ !=  undefined)
+{
+var DETAIL_URL = "@Url.Action("detail", "BasicInformation")?id=" + row['specialeventandservices']
+return '<a  href="' + DETAIL_URL  + '">'+ row["specialeventandservices_master"]+ '</a>' 
+}else {
+ 
+return row['specialeventandservices_master'] 
+}
+}
+}},
+{data: 'devent1'},
+{data: 'devent2'},
+{data: 'devent3'},
+{data: 'uevent1'},
+{data: 'uevent2'},
+{data: 'uevent3'},
+{data: 'sevent1'},
+{data: 'sevent2'},
+{data: 'sevent3'},
+{data: 'sevent4'},
+{data: 'sevent5'},
+{data: 'deliveryconditionasperchargeindication'},
+{data: 'deliveryavailable'},
+{data: 'paymenturl',mRender: function (data, type, row) {if(row["paymenturl"]==null) {
+ return '-' 
+}else {
+ return '<a  href="' + row["paymenturl"]+ '"><i class="fa fa-globe"></i></a>' 
+}
+}},
+{data: 'paymentqrcode',mRender: function (data, type, row) {if(row["paymentqrcode"]==null) {
+ return '-' 
+}else {
+ 
+var uploaded_paymentqrcode = row["paymentqrcode"].split('|');
+var iterate = 1;
+                                            var collect_files="";
+                                            var random_num=Math.floor(Math.random() * (100000 - 1 + 1) + 57);
+                                            for (var i = 0; i < uploaded_paymentqrcode.length; i++) {
+        
+
+	                                            if (uploaded_paymentqrcode[i] != "") {
+if(iterate==1)
+collect_files+='<a class="img'+random_num+'" href=' + uploaded_paymentqrcode[i] + '><img  class="disp_image '+random_num+'" style="width: 75px; height: 75px" src=' + uploaded_paymentqrcode[i] + '></a>'
+else
+collect_files+='<a class="img'+random_num+'" href=' + uploaded_paymentqrcode[i] + '><img class="disp_image '+random_num+'" style="display:none;width: 75px; height: 75px" src=' + uploaded_paymentqrcode[i] + '></a>'
+iterate = iterate + 1;
+	                                            }
+
+                                              
+                                            }
+$('body').on('click', 'a.img' + random_num + '', function(e) {
+e.preventDefault();
+$('.img' + random_num + '').colorbox({rel: $(this).attr('href'), width: "90%", height: "80%" });
+$.colorbox({open: true });
+});
+return collect_files;  }}},
+{data: 'paymentmobilenumber',mRender: function (data, type, row) {if(row["paymentmobilenumber"]==null) {
+ return '-' 
+}else {
+ return '<a  href="tel:' + row["paymentmobilenumber"]+ '">'+ row["paymentmobilenumber"]+ '</a>' 
+}
+}},
+{data: 'payoffline'},
+
+		{
+                    "sName": "specialeventandservicesid",
+                    "bSearchable": false,
+                    "bSortable": false,
+                    data: 'specialeventandservicesid', "className": "dt-center",
+                    mRender: function(data, type, row) {
+                    var Actions=getAuthoController("SpecialEventandServices")
+                     var DETAIL_URL = "@Url.Action("detail", "SpecialEventandServices")?id=" + row["specialeventandservicesid"]
+		var appendMessage='<a href="' + DETAIL_URL + '" class="dropdown-item">View</a>';
+                    if(Actions !=undefined)
+                    {
+                    for (var index = 0; index < Actions.length; ++index) {
+                    var entry = Actions[index];
+			 
+                    if(entry.viewname !="list" && entry.viewname !="list_verify_approved" && entry.viewname !="list_verify" && entry.viewname !="create" && entry.viewname !="post" && entry.viewname !="getall" && entry.viewname !="get" && entry.viewname !="check_user" && entry.viewname !="change_password"){
+                    var URL = "@Url.Action("entry.viewname", "SpecialEventandServices")?SpecialEventandServicesid=" + row["specialeventandservicesid"]
+                    URL = URL.replace("entry.viewname", entry.actionmethodname);
+			 
+                    if(entry.viewname=="delete")
+                    {
+	                    
+	                    appendMessage+='<a href="' + URL + '" class="dropdown-item deleteRecordFromTable">'+entry.actiondisplayname+'</a>' 	
+				   
+				
+                    }
+                    else
+                    {
+                     
+	                    appendMessage+='<a href="' + URL + '" class="dropdown-item">'+entry.actiondisplayname+'</a>' 
+                    }
+			 
+                    }					 
+						 
+                    }
+								
+                    if(appendMessage =="")
+                    {
+                    return '-'
+
+                    }
+                    else
+                    {
+                    return '<div class="dropdown actions__item">' +
+                    '<i data-toggle="dropdown" class="fa fa-ellipsis-h"></i>' +
+                    '<div class="dropdown-menu dropdown-menu-right">' + appendMessage +
+		 
+
+                    '</div>' +
+                    '</div>'
+                    }
+
+
+
+                    }
+                    else
+                    {
+                    return '-'
+
+                    }
+
+
+                    }
+                    }
+	
+
+	 ],
+	ajax: {
+	url: "@Url.Action("get_Special_Event_and_Services_List", "SpecialEventandServices")",
+	type: 'GET',
+	dataType: 'json',
+	dataSrc: '',
+	data: sendFilterData,
+	error: function(jqXHR, textStatus, errorThrown) {
+	if (JSON.stringify(jqXHR.responseText) == "\"API Authorization failed\"")
+	{
+	swal({
+	title: 'Failed!',
+	text: jqXHR.responseText,
+	type: 'error',
+	buttonsStyling: false,
+	confirmButtonClass: 'btn btn-primary',
+	allowOutsideClick: false
+	}).then(function() {
+	window.location = "@Url.Action("AuthorizationFailed", "users")"
+	}) 
+	}
+	else
+	{
+		swal({
+		title: 'Contact Administrator !',
+		text: jqXHR.responseText,
+		type: 'error',
+		buttonsStyling: false,
+		confirmButtonClass: 'btn btn-primary'
+		}) 
+	}
+	}
+	}
+	})
+     
+	  
+ $('body').on('click', '.ColVis_collection li', function(a) {
+    event.stopPropagation();
+  });
+ 
+ $('body').on('change', '.colvis_switch', function(a) {
+    var column = table.column($(this).attr('data-column'));
+    column.visible(!column.visible());
+  });
+
+
+ 
+
+   
+	 
+
+
+	
+
+
+							
+					}
+                    	
+
+					$(document).ready(function () {
+
+
+					fill_SpecialEventandServices()
+
+
+					var Actions=getAutho("SpecialEventandServices","list")
+					if(Actions == undefined){
+					window.location = "@Url.Action("RoleAuthorizationFailed", "users")"
+					}
+
+
+
+
+					});
+					
+
+                    $("body").on("click", "[data-table-action]", function(a) {
+                    a.preventDefault();
+                    var b = $(this).data("table-action");
+                    console.log('dataTables_wrapper', $(this).closest(".dataTables_wrapper").find(".buttons-print"));
+                    if ("excel" === b && $(this).closest(".dataTables_wrapper").find(".buttons-excel").trigger("click"), "csv" === b && $(this).closest(".dataTables_wrapper").find(".buttons-csv").trigger("click"), "print" === b && $(this).closest(".dataTables_wrapper").find(".buttons-print").trigger("click"), "fullscreen" === b) {
+                    var c = $(this).closest(".card");
+                    c.hasClass("card--fullscreen") ? (c.removeClass("card--fullscreen"), $("body").removeClass("data-table-toggled")) : (c.addClass("card--fullscreen"), $("body").addClass("data-table-toggled"))
+                    }
+                    });
+					</script>
+					
+					
+					
+					
+								<script>
+								$(document).ready(function () {
+							 
+
+								$("#btnFilter").click(function(){
+								fill_SpecialEventandServices();
+								})
+								});
+								</script>
+
+
+					
+                    
+					

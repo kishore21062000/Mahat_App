@@ -1,0 +1,10 @@
+C:\Users\lenovo\Downloads\webapp_userslist\userslist.Models\bin\Debug\netcoreapp3.1\userslist.Models.deps.json
+C:\Users\lenovo\Downloads\webapp_userslist\userslist.Models\bin\Debug\netcoreapp3.1\userslist.Models.dll
+C:\Users\lenovo\Downloads\webapp_userslist\userslist.Models\bin\Debug\netcoreapp3.1\userslist.Models.pdb
+C:\Users\lenovo\Downloads\webapp_userslist\userslist.Models\obj\Debug\netcoreapp3.1\userslist.Models.csproj.AssemblyReference.cache
+C:\Users\lenovo\Downloads\webapp_userslist\userslist.Models\obj\Debug\netcoreapp3.1\userslist.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Downloads\webapp_userslist\userslist.Models\obj\Debug\netcoreapp3.1\userslist.Models.AssemblyInfoInputs.cache
+C:\Users\lenovo\Downloads\webapp_userslist\userslist.Models\obj\Debug\netcoreapp3.1\userslist.Models.AssemblyInfo.cs
+C:\Users\lenovo\Downloads\webapp_userslist\userslist.Models\obj\Debug\netcoreapp3.1\userslist.Models.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Downloads\webapp_userslist\userslist.Models\obj\Debug\netcoreapp3.1\userslist.Models.dll
+C:\Users\lenovo\Downloads\webapp_userslist\userslist.Models\obj\Debug\netcoreapp3.1\userslist.Models.pdb

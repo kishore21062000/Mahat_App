@@ -1,0 +1,10 @@
+C:\Users\lenovo\Downloads\webapp_Gmailconsole\Gmailconsole.Models\bin\Debug\netcoreapp3.1\Gmailconsole.Models.deps.json
+C:\Users\lenovo\Downloads\webapp_Gmailconsole\Gmailconsole.Models\bin\Debug\netcoreapp3.1\Gmailconsole.Models.dll
+C:\Users\lenovo\Downloads\webapp_Gmailconsole\Gmailconsole.Models\bin\Debug\netcoreapp3.1\Gmailconsole.Models.pdb
+C:\Users\lenovo\Downloads\webapp_Gmailconsole\Gmailconsole.Models\obj\Debug\netcoreapp3.1\Gmailconsole.Models.csproj.AssemblyReference.cache
+C:\Users\lenovo\Downloads\webapp_Gmailconsole\Gmailconsole.Models\obj\Debug\netcoreapp3.1\Gmailconsole.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Downloads\webapp_Gmailconsole\Gmailconsole.Models\obj\Debug\netcoreapp3.1\Gmailconsole.Models.AssemblyInfoInputs.cache
+C:\Users\lenovo\Downloads\webapp_Gmailconsole\Gmailconsole.Models\obj\Debug\netcoreapp3.1\Gmailconsole.Models.AssemblyInfo.cs
+C:\Users\lenovo\Downloads\webapp_Gmailconsole\Gmailconsole.Models\obj\Debug\netcoreapp3.1\Gmailconsole.Models.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Downloads\webapp_Gmailconsole\Gmailconsole.Models\obj\Debug\netcoreapp3.1\Gmailconsole.Models.dll
+C:\Users\lenovo\Downloads\webapp_Gmailconsole\Gmailconsole.Models\obj\Debug\netcoreapp3.1\Gmailconsole.Models.pdb

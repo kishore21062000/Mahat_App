@@ -1,0 +1,13 @@
+C:\Users\lenovo\Downloads\webapp_Timemajesty\Timemajesty.DAL\bin\Debug\netcoreapp3.1\Timemajesty.DAL.deps.json
+C:\Users\lenovo\Downloads\webapp_Timemajesty\Timemajesty.DAL\bin\Debug\netcoreapp3.1\Timemajesty.DAL.dll
+C:\Users\lenovo\Downloads\webapp_Timemajesty\Timemajesty.DAL\bin\Debug\netcoreapp3.1\Timemajesty.DAL.pdb
+C:\Users\lenovo\Downloads\webapp_Timemajesty\Timemajesty.DAL\bin\Debug\netcoreapp3.1\Timemajesty.Models.dll
+C:\Users\lenovo\Downloads\webapp_Timemajesty\Timemajesty.DAL\bin\Debug\netcoreapp3.1\Timemajesty.Models.pdb
+C:\Users\lenovo\Downloads\webapp_Timemajesty\Timemajesty.DAL\obj\Debug\netcoreapp3.1\Timemajesty.DAL.csproj.AssemblyReference.cache
+C:\Users\lenovo\Downloads\webapp_Timemajesty\Timemajesty.DAL\obj\Debug\netcoreapp3.1\Timemajesty.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Downloads\webapp_Timemajesty\Timemajesty.DAL\obj\Debug\netcoreapp3.1\Timemajesty.DAL.AssemblyInfoInputs.cache
+C:\Users\lenovo\Downloads\webapp_Timemajesty\Timemajesty.DAL\obj\Debug\netcoreapp3.1\Timemajesty.DAL.AssemblyInfo.cs
+C:\Users\lenovo\Downloads\webapp_Timemajesty\Timemajesty.DAL\obj\Debug\netcoreapp3.1\Timemajesty.DAL.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Downloads\webapp_Timemajesty\Timemajesty.DAL\obj\Debug\netcoreapp3.1\Timemajesty.DAL.csproj.CopyComplete
+C:\Users\lenovo\Downloads\webapp_Timemajesty\Timemajesty.DAL\obj\Debug\netcoreapp3.1\Timemajesty.DAL.dll
+C:\Users\lenovo\Downloads\webapp_Timemajesty\Timemajesty.DAL\obj\Debug\netcoreapp3.1\Timemajesty.DAL.pdb

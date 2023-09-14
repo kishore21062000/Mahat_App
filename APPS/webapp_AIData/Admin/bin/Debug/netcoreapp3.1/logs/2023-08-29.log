@@ -1,0 +1,16 @@
+2023-08-29 09:56:44.0070|ERROR|Admin.Controllers.usersController|Login|Error occured in - users / Login , Error Message : No connection could be made because the target machine actively refused it.|RunInternal at offset 118 in file:line:column <filename unknown>:0:0
+ExecutionCallback at offset 32 in file:line:column <filename unknown>:0:0
+OnCompleted at offset 266 in file:line:column <filename unknown>:0:0
+
+2023-08-29 11:50:39.8707|ERROR|Admin.ErrorLoggingMiddleware|Add_Industries|Admin API MIDDLEWARE UNHANDLED EXCEPTION -> An existing connection was forcibly closed by the remote host.|ExecutionCallback at offset 32 in file:line:column <filename unknown>:0:0
+OnCompleted at offset 49 in file:line:column <filename unknown>:0:0
+OnAsyncComplete at offset 252 in file:line:column <filename unknown>:0:0
+
+2023-08-29 11:50:41.0449|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|Add_Industries|An unhandled exception has occurred while executing the request.|ExecutionContextCallback at offset 62 in file:line:column <filename unknown>:0:0
+MoveNext at offset 319 in file:line:column <filename unknown>:0:0
+UnhandledException at offset 35 in file:line:column <filename unknown>:0:0
+
+2023-08-29 11:50:41.0870|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Add_Industries|Connection ID "18302628907913838724", Request ID "40000085-0005-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.|MoveNext at offset 388 in file:line:column <filename unknown>:0:0
+ReportApplicationError at offset 300 in file:line:column <filename unknown>:0:0
+ApplicationError at offset 54 in file:line:column <filename unknown>:0:0
+

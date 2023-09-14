@@ -1,0 +1,166 @@
+
+					<!--This code generated from Deliveries Powered by Mahat, Source Machine : 15.206.208.9 , Build Number : Build 14092021 #2021-09-014(Updated on 29102021 12:49) on 07/15/2023 14:17:43 -->
+					@using Microsoft.AspNetCore.Http
+					@inject IHttpContextAccessor HttpContextAccessor
+					@model DineandDiscover.Models.BasicInformationModel
+					@{
+					ViewData["Title"] = "Basic Information";
+					Layout = "~/Views/Shared/_Layout.cshtml";
+					}
+
+					<div class="">
+					     
+					<div class="">
+
+					      <div id="cma_printableArea">
+	
+                            <div class="row printablerow"> 
+                             
+                            <div class="col-sm-4 col-xs-12 p-2 restaurantimage_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Restaurant Image :</label><br>
+										<span class="auto_cls_restaurantimage"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+<div class="col-sm-4 col-xs-12 p-2 nameoftherestaurant_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Name of the Restaurant :</label><br>
+										<span class="auto_cls_nameoftherestaurant"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+<div class="col-sm-4 col-xs-12 p-2 restaurantlocation_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Restaurant Location :</label><br>
+										<span class="auto_cls_restaurantlocation"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+<div class="col-sm-4 col-xs-12 p-2 cuisinetype_craftmyapp_viewcontainer">
+								<div>
+									<div class="form-group form-group--float-above my-3" > 
+										<label>Cuisine Type :</label><br>
+										<span class="auto_cls_cuisinetype"></span>
+										<i class="form-group__bar" ></i>
+									</div>
+								</div>
+							</div>
+
+											 
+											 
+                            </div>
+                         </div>
+						 <div class="row">
+					            <div class="col-sm-12 col-xs-12">
+					                <input type="button" class="btn cma_primary_button  waves-effect pull-right" onclick="printDiv('cma_printableArea')" value="Print" />
+
+                                    <button type="button" id="btnSubmit" onclick="window.history.back()" class="btn btn-secondary cma_cancel_button waves-effect">Back</button>            
+
+					            </div>
+					        </div>					
+  
+                    </div>
+					
+                    <link href="~/components/jquery-colorbox/colorbox.css" rel="stylesheet" />
+                    <script src="~/components/jquery-colorbox/jquery.colorbox.js"></script>
+                    <link href="~/css/GallaryContent/style.css" rel="stylesheet" />
+                    <link href="~/components/starrr/starrr.css" rel="stylesheet" />
+					 
+					<script type="text/javascript">
+                     function printDiv(divName) {
+                        var printContents = document.getElementById(divName).innerHTML;
+                        var originalContents = document.body.innerHTML;
+
+                        document.body.innerHTML = printContents;
+
+                        window.print();
+
+                        document.body.innerHTML = originalContents;
+                    }
+                    function fill_BasicInformation_view_data(){
+
+                       var  BasicInformationid = getUrlVars()["id"];
+                                            $("#viewDetails_Auto").show()
+											$(".auto_checker_action").hide()
+                                                $.ajax({
+												url: '@Url.Action("getById_sp_all_BasicInformation")',
+												dataType: 'json',
+												data:{BasicInformationid: BasicInformationid },
+												success: function(data) {
+
+												var obj=data.Table[0]
+													for (var key in obj) {
+													
+															$(".auto_cls_"+key).html(obj[key]);
+														 	
+															if(key=='restaurantimage'){
+																			$('.auto_cls_restaurantimage').empty()
+                                                                            if(obj[key] !=null)  {            
+                                                                          
+                                                                            var uploaded_restaurantimage = obj[key].split('|');
+                                                                            var iterate = 0;
+                                                                            for (var i = 0; i < uploaded_restaurantimage.length; i++) {
+
+
+	                                                                            if (uploaded_restaurantimage[i] != "") {
+		                                                                            iterate = iterate + 1;
+		                                                                            if (iterate == 1)
+			                                                                            $('.auto_cls_restaurantimage').append('<a href=' + uploaded_restaurantimage[i] + ' class="imgrestaurantimage auto_clr_restaurantimage"><img  src=' + uploaded_restaurantimage[i] + ' width="100px" /></a>')
+		                                                                            else
+
+			                                                                            $('.auto_cls_restaurantimage').append('<div style="display:none"> <a href=' + uploaded_restaurantimage[i] + ' class="imgrestaurantimage auto_clr_restaurantimage"><img  src=' + uploaded_restaurantimage[i] + ' width="100px" /></a></div>')
+		 
+	                                                                            }
+
+
+                                                                            }
+
+                                                                            $('body').on('click', 'a.imgrestaurantimage', function (e) {
+                                                                            e.preventDefault();
+                                                                            $('.imgrestaurantimage').colorbox({ rel: '.imgrestaurantimage', width: "90%", height: "80%" });
+                                                                            $.colorbox({ open: true });
+                                                                            });
+
+
+
+
+                                                                                    }
+
+
+																	}
+
+
+													}
+												}
+
+												})
+
+                   }
+                   
+
+					$(document).ready(function () {
+
+
+					fill_BasicInformation_view_data()
+
+
+					var Actions=getAutho("BasicInformation","list")
+					if(Actions == undefined){
+					window.location = "@Url.Action("RoleAuthorizationFailed", "users")"
+					}
+
+
+
+
+					});
+					 
+					</script>
+					 
+					

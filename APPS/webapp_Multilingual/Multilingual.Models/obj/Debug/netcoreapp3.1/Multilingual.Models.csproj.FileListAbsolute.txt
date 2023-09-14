@@ -1,0 +1,10 @@
+C:\Users\lenovo\Downloads\webapp_Multilingual\Multilingual.Models\bin\Debug\netcoreapp3.1\Multilingual.Models.deps.json
+C:\Users\lenovo\Downloads\webapp_Multilingual\Multilingual.Models\bin\Debug\netcoreapp3.1\Multilingual.Models.dll
+C:\Users\lenovo\Downloads\webapp_Multilingual\Multilingual.Models\bin\Debug\netcoreapp3.1\Multilingual.Models.pdb
+C:\Users\lenovo\Downloads\webapp_Multilingual\Multilingual.Models\obj\Debug\netcoreapp3.1\Multilingual.Models.csproj.AssemblyReference.cache
+C:\Users\lenovo\Downloads\webapp_Multilingual\Multilingual.Models\obj\Debug\netcoreapp3.1\Multilingual.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Downloads\webapp_Multilingual\Multilingual.Models\obj\Debug\netcoreapp3.1\Multilingual.Models.AssemblyInfoInputs.cache
+C:\Users\lenovo\Downloads\webapp_Multilingual\Multilingual.Models\obj\Debug\netcoreapp3.1\Multilingual.Models.AssemblyInfo.cs
+C:\Users\lenovo\Downloads\webapp_Multilingual\Multilingual.Models\obj\Debug\netcoreapp3.1\Multilingual.Models.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Downloads\webapp_Multilingual\Multilingual.Models\obj\Debug\netcoreapp3.1\Multilingual.Models.dll
+C:\Users\lenovo\Downloads\webapp_Multilingual\Multilingual.Models\obj\Debug\netcoreapp3.1\Multilingual.Models.pdb

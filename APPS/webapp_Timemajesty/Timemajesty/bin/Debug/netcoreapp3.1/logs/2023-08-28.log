@@ -1,0 +1,12 @@
+2023-08-28 12:09:30.2269|ERROR|Timemajesty.ErrorLoggingMiddleware|Add_watchlist|Timemajesty API MIDDLEWARE UNHANDLED EXCEPTION -> An existing connection was forcibly closed by the remote host.|ExecutionCallback at offset 32 in file:line:column <filename unknown>:0:0
+OnCompleted at offset 49 in file:line:column <filename unknown>:0:0
+OnAsyncComplete at offset 208 in file:line:column <filename unknown>:0:0
+
+2023-08-28 12:09:30.6964|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|Add_watchlist|An unhandled exception has occurred while executing the request.|ExecutionContextCallback at offset 62 in file:line:column <filename unknown>:0:0
+MoveNext at offset 319 in file:line:column <filename unknown>:0:0
+UnhandledException at offset 35 in file:line:column <filename unknown>:0:0
+
+2023-08-28 12:09:30.7850|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Add_watchlist|Connection ID "18086456112915153017", Request ID "4000007a-0002-fb00-b63f-84710c7967bb": An unhandled exception was thrown by the application.|MoveNext at offset 426 in file:line:column <filename unknown>:0:0
+ReportApplicationError at offset 300 in file:line:column <filename unknown>:0:0
+ApplicationError at offset 54 in file:line:column <filename unknown>:0:0
+

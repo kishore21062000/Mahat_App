@@ -1,0 +1,8 @@
+2023-07-25 20:19:10.4302|ERROR|MultilingualWebApi.Controllers.tenantController|get_project_tenant|Could not find stored procedure 'get_project_tenant'.|Execute at offset 16 in file:line:column <filename unknown>:0:0
+lambda_method at offset 51 in file:line:column <filename unknown>:0:0
+get_project_tenant at offset 128 in file:line:column C:\Users\lenovo\Downloads\webapp_Multilingual\MultilingualWebApi\Controllers\tenantController.cs:300:7
+
+2023-07-25 20:20:07.9450|ERROR|MultilingualWebApi.Controllers.tenantController|get_project_tenant|Could not find stored procedure 'get_project_tenant'.|Execute at offset 16 in file:line:column <filename unknown>:0:0
+lambda_method at offset 51 in file:line:column <filename unknown>:0:0
+get_project_tenant at offset 128 in file:line:column C:\Users\lenovo\Downloads\webapp_Multilingual\MultilingualWebApi\Controllers\tenantController.cs:300:7
+

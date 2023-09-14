@@ -1,0 +1,13 @@
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.DAL\bin\Debug\netcoreapp3.1\AIData.DAL.deps.json
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.DAL\bin\Debug\netcoreapp3.1\AIData.DAL.dll
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.DAL\bin\Debug\netcoreapp3.1\AIData.DAL.pdb
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.DAL\bin\Debug\netcoreapp3.1\AIData.Models.dll
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.DAL\bin\Debug\netcoreapp3.1\AIData.Models.pdb
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.DAL\obj\Debug\netcoreapp3.1\AIData.DAL.csproj.AssemblyReference.cache
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.DAL\obj\Debug\netcoreapp3.1\AIData.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.DAL\obj\Debug\netcoreapp3.1\AIData.DAL.AssemblyInfoInputs.cache
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.DAL\obj\Debug\netcoreapp3.1\AIData.DAL.AssemblyInfo.cs
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.DAL\obj\Debug\netcoreapp3.1\AIData.DAL.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.DAL\obj\Debug\netcoreapp3.1\AIData.DAL.csproj.CopyComplete
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.DAL\obj\Debug\netcoreapp3.1\AIData.DAL.dll
+C:\Users\lenovo\Downloads\webapp_AIData\AIData.DAL\obj\Debug\netcoreapp3.1\AIData.DAL.pdb
